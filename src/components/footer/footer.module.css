@@ -1,0 +1,24 @@
+.container {
+   flex-grow: 0;
+   padding: 20px;
+   margin-top: 20px;
+   display: flex;
+   border-top: solid 2px white;
+   justify-content: right;
+   width: 100%;
+   height: 50px;
+}
+
+.iconesContainer {
+   display: flex;
+   gap: 10px;
+}
+
+.icone {
+   width: 30px;
+   filter: var(--primary-filter);
+}
+
+.icone:hover {
+   filter: var(--tertiary-filter);
+}
