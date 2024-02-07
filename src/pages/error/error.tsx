@@ -1,10 +1,9 @@
-import { Link } from 'react-router-dom';
+import styles from './error.module.css';
 
 const Error = () => {
    return (
-      <div>
-         <div>404 not Found</div>
-         <Link to={'/'}>Retour</Link>
+      <div className={styles.container}>
+         <h1>Error 404</h1>
       </div>
    );
 };

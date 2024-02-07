@@ -28,8 +28,11 @@ const App = () => {
                path: 'contact',
                element: <Contact />,
             },
+            {
+               path: '*',
+               element: <Error />,
+            },
          ],
-         errorElement: <Error />,
       },
    ]);
 

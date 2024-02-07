@@ -25,15 +25,17 @@
 }
 
 :root {
-   --primary-color: 255, 255, 255;
-   --secondary-color: 29, 240, 255;
-   --tertiary-color: 255, 29, 180;
+   --text-primary: 255, 255, 255;
+   --text-secondary: 29, 240, 255;
+   --text-tertiary: 255, 29, 180;
 
-   --primary-filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(315deg)
+   --bg-primary: 32, 32, 32;
+
+   --filter-primary: invert(100%) sepia(0%) saturate(7500%) hue-rotate(315deg)
       brightness(103%) contrast(102%);
-   --secondary-filter: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
+   --filter-secondary: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
       brightness(101%) contrast(103%);
-   --tertiary-filter: invert(29%) sepia(99%) saturate(4621%) hue-rotate(305deg)
+   --filter-tertiary: invert(29%) sepia(99%) saturate(4621%) hue-rotate(305deg)
       brightness(102%) contrast(102%);
 }
 
@@ -42,20 +44,26 @@
 }
 
 body {
-   color: rgba(var(--primary-color));
-   background-color: rgb(32, 32, 32);
+   color: rgba(var(--text-primary));
+   background-color: rgb(var(--bg-primary));
 }
 
 main {
+   width: 100%;
+   padding: 2rem;
    flex-grow: 1;
    display: flex;
-   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   overflow: scroll;
+   scrollbar-width: thin;
+   scrollbar-color: rgba(var(--text-tertiary)) rgba(var(--text-tertiary));
 }
 
 a {
    text-decoration: none;
 }
 
-a:visited {
-   color: rgba(var(--primary-color));
-}
+/* a:visited {
+   color: rgba(var(--text-primary));
+} */

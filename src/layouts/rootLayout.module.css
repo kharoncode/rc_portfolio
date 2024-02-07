@@ -1,7 +1,5 @@
 .container {
-   min-height: 100%;
+   height: 100svh;
    width: 100%;
    display: flex;
-   flex-direction: column;
-   align-items: center;
 }
