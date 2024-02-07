@@ -26,6 +26,7 @@
 .link img {
    width: 30px;
    filter: var(--filter-primary);
+   transition-duration: 100ms;
 }
 
 .link:hover {
@@ -34,6 +35,15 @@
 
 .link:hover img {
    filter: var(--filter-tertiary);
+   transition-duration: 300ms;
+}
+
+.link:nth-child(odd):hover img {
+   rotate: 10deg;
+}
+
+.link:nth-child(even):hover img {
+   rotate: -10deg;
 }
 
 .isActive {

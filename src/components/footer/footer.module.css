@@ -19,4 +19,13 @@
 
 .icone:hover {
    filter: var(--filter-tertiary);
+   transition-duration: 300ms;
+}
+
+.a:nth-child(odd) .icone:hover {
+   rotate: 10deg;
+}
+
+.a:nth-child(even) .icone:hover {
+   rotate: -10deg;
 }
