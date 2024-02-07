@@ -5,6 +5,7 @@ import RootLayout from '@/layouts/RootLayout';
 import Work from '@/pages/work/Work';
 import About from '@/pages/about/About';
 import Contact from '@/pages/contact/Contact';
+import Projects from '@/pages/projects/Projects';
 
 const App = () => {
    const router = createBrowserRouter([
@@ -20,6 +21,11 @@ const App = () => {
                path: 'work',
                element: <Work />,
             },
+            {
+               path: 'projects/:category/:id',
+               element: <Projects />,
+            },
+
             {
                path: 'about',
                element: <About />,

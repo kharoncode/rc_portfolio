@@ -1,0 +1,21 @@
+.container {
+   width: 100%;
+   flex-direction: column;
+   display: flex;
+   background-color: rgb(255, 0, 0);
+}
+
+.pictureContainer {
+   width: 100%;
+   overflow: hidden;
+}
+
+.picture {
+   width: 100%;
+   transition-duration: 500ms;
+}
+
+.picture:hover {
+   scale: 1.1;
+   transition-duration: 500ms;
+}

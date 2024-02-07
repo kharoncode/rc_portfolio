@@ -55,9 +55,10 @@ main {
    display: flex;
    flex-direction: column;
    align-items: center;
-   overflow: scroll;
+   overflow-y: scroll;
    scrollbar-width: thin;
    scrollbar-color: rgba(var(--text-tertiary)) rgba(var(--text-tertiary));
+   background-color: rgba(var(--text-primary), 0.2);
 }
 
 a {
