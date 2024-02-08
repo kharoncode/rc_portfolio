@@ -84,8 +84,3 @@ a:active {
    text-decoration: none;
    color: inherit;
 }
-
-/* a:visited,
-a:active {
-   color: rgba(var(--text-primary));
-} */
