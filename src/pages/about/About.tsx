@@ -3,6 +3,7 @@ import styles from './about.module.css';
 const About = () => {
    return (
       <>
+         <p>About n Skill</p>
          <p className={styles.test}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut,
             repellat cum. Voluptate, dolorem id commodi harum quo officiis

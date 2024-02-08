@@ -22,7 +22,7 @@ const App = () => {
                element: <Work />,
             },
             {
-               path: 'projects/:category/:id',
+               path: 'projects/:projectId',
                element: <Projects />,
             },
 

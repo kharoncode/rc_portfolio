@@ -4,9 +4,11 @@ const Home = () => {
    return (
       <>
          <h1 className={styles.title}>
-            Hi, <br />
-            I'm <span className={styles.name}>Rémi</span>, <br />
-            Front-End Developer !
+            Hi, my name is
+            <br />
+            <span className={styles.name}>Rémi</span>, <br />
+            and i'm a <br />
+            <span className={styles.name}>Front-End Developer !</span>
          </h1>
       </>
    );
