@@ -1,21 +1,86 @@
 .container {
-   width: 100%;
+   max-width: 380px;
+   min-width: 300px;
+   padding: 5px;
+   flex: 1 20%;
    flex-direction: column;
    display: flex;
-   background-color: rgb(255, 0, 0);
+   align-items: center;
+   border-radius: 10px;
+   overflow: hidden;
+   gap: 10px;
+}
+
+.container:hover {
+   box-shadow: rgba(var(--text-tertiary), 0.2) 0px 7px 29px 0px;
+   transition-duration: 300ms;
+}
+
+.container:hover .picture {
+   scale: 1.1;
+   transition-duration: 500ms;
+}
+
+.container:hover .hoverCard {
+   opacity: 1;
+   transition-duration: 400ms;
 }
 
 .pictureContainer {
+   position: relative;
    width: 100%;
    overflow: hidden;
 }
 
 .picture {
+   filter: brightness(90%);
+   object-fit: cover;
    width: 100%;
+   height: 200px;
    transition-duration: 500ms;
 }
 
-.picture:hover {
-   scale: 1.1;
-   transition-duration: 500ms;
+.hoverCard {
+   opacity: 0;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-around;
+   background-color: rgb(var(--bg-primary), 0.8);
+   transition-duration: 200ms;
+}
+
+.icone {
+   width: 40px;
+   filter: var(--filter-primary);
+}
+
+.iconeLink:hover {
+   filter: var(--filter-tertiary);
+   transition-duration: 300ms;
+}
+
+.eyeSlash {
+   filter: var(--filter-primary-darken);
+}
+
+.info {
+   padding: 0 20px 20px 20px;
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+.info h3 {
+   font-size: 1.25rem;
+}
+
+.info p {
+   font-size: 1.1rem;
+   line-height: 1.6rem;
+   color: rgba(var(--text-primary), 0.8);
 }

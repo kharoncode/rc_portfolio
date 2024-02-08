@@ -1,7 +1,6 @@
 import { projectsList } from '@/data/projectsList';
 import styles from './work.module.css';
 import ProjectCard from '@/components/projectCard/ProjectCard';
-import { Link } from 'react-router-dom';
 
 export type projectsListT = {
    [key: string]: {
@@ -18,18 +17,10 @@ const Work = () => {
    const list = projectsList as projectsListT;
    return (
       <div className={styles.container}>
-         <h2>Projects</h2>
+         <h1 className={styles.title}>Projects</h1>
          <div className={styles.projectsContainer}>
             {Object.keys(list).map((key) => {
-               return (
-                  <Link
-                     className={styles.project}
-                     key={key}
-                     to={`/projects/${key}`}
-                  >
-                     <ProjectCard data={list[key]} />
-                  </Link>
-               );
+               return <ProjectCard data={list[key]} />;
             })}
          </div>
       </div>

@@ -17,7 +17,7 @@ export const projectsList = {
          "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs.",
       tag: ['React', 'Redux', 'Redux TLK', 'API', 'Mobile'],
       github: 'https://github.com/kharoncode/BuffTimer',
-      link: 'https://www.collinremi.com/website/bufftimer',
+      link: '',
    },
    hrnet: {
       id: 'hrnet',
