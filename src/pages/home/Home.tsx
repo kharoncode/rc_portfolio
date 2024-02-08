@@ -8,7 +8,7 @@ const Home = () => {
             <br />
             <span className={styles.name}>Rémi</span>, <br />
             and i'm a <br />
-            <span className={styles.name}>Front-End Developer !</span>
+            <span className={styles.name}>Front-End Developer</span> !
          </h1>
       </>
    );

@@ -19,13 +19,22 @@
 
 .icone:hover {
    filter: var(--filter-tertiary);
-   transition-duration: 300ms;
 }
 
-.a:nth-child(odd) .icone:hover {
+.navIconeContainer {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition-duration: 200ms;
+}
+
+.a:nth-child(odd):hover .navIconeContainer {
    rotate: 10deg;
+   transition-duration: 400ms;
 }
 
-.a:nth-child(even) .icone:hover {
+.a:nth-child(even):hover .navIconeContainer {
    rotate: -10deg;
+   transition-duration: 400ms;
 }

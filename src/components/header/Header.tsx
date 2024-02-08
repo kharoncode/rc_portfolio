@@ -7,10 +7,13 @@ import aboutIcone from '@/assets/icones/about.svg';
 import contactIcone from '@/assets/icones/contact.svg';
 
 import darkIcone from '@/assets/icones/dark.svg';
-//import lightIcone from '@/assets/icones/light.svg';
+import lightIcone from '@/assets/icones/light.svg';
 import frFlage from '@/assets/icones/flag_fr.svg';
+import { useContext } from 'react';
+import { ThemeContext } from '@/router/App';
 
 const Header = () => {
+   const { theme, toggleTheme } = useContext(ThemeContext);
    return (
       <header className={styles.container}>
          <nav className={styles.nav}>
@@ -65,9 +68,10 @@ const Header = () => {
          </nav>
          <div className={styles.settings}>
             <img
+               onClick={() => toggleTheme()}
                className={`${styles.icone} ${styles.mode}`}
-               src={darkIcone}
-               alt="Dark"
+               src={theme === 'dark' ? lightIcone : darkIcone}
+               alt={theme}
             />
             <img className={styles.flag} src={frFlage} alt="FR" />
          </div>

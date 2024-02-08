@@ -5,9 +5,22 @@ import RootLayout from '@/layouts/RootLayout';
 import Work from '@/pages/work/Work';
 import About from '@/pages/about/About';
 import Contact from '@/pages/contact/Contact';
+import { createContext, useState } from 'react';
 //import Projects from '@/pages/projects/Projects';
 
+type themeContextT = {
+   theme: string;
+   toggleTheme: () => void;
+} | null;
+
+export const ThemeContext = createContext<themeContextT>(null);
+
 const App = () => {
+   const [theme, setTheme] = useState('light');
+   const toggleTheme = () => {
+      setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
+      document.querySelector('body')?.setAttribute('data-theme', theme);
+   };
    const router = createBrowserRouter([
       {
          path: '/',
@@ -44,7 +57,9 @@ const App = () => {
 
    return (
       <>
-         <RouterProvider router={router} />
+         <ThemeContext.Provider value={{ theme, toggleTheme }}>
+            <RouterProvider router={router} />
+         </ThemeContext.Provider>
       </>
    );
 };

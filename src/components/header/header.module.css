@@ -52,7 +52,7 @@
 
 .link:nth-child(even):hover .navIconeContainer {
    rotate: -10deg;
-   transition-duration: 300ms;
+   transition-duration: 400ms;
 }
 
 .isActive {

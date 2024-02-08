@@ -1,27 +1,13 @@
 @font-face {
-   font-family: 'Roboto';
-   src: url('/font/Roboto-Regular.ttf'), format('truetype');
-   font-weight: normal;
-   font-style: normal;
-}
-@font-face {
-   font-family: 'Roboto';
-   src: url('/font/Roboto-Bold.ttf'), format('truetype');
-   font-weight: 700;
-   font-style: normal;
-}
-@font-face {
-   font-family: 'Roboto';
-   src: url('/font/Roboto-Medium.ttf'), format('truetype');
-   font-weight: 500;
-   font-style: normal;
+   font-family: 'Martian_Mono';
+   src: url('/font/martian_mono/MartianMono-VariableFont_wdth,wght.ttf');
 }
 
 * {
    box-sizing: border-box;
    padding: 0;
    margin: 0;
-   font-family: 'Roboto', sans-serif;
+   font-family: 'Martian_Mono', sans-serif;
 }
 
 :root {
@@ -30,6 +16,24 @@
    --text-tertiary: 255, 29, 180;
 
    --bg-primary: 32, 32, 32;
+   --bg-secondary: 58, 58, 58;
+
+   --filter-primary: invert(100%) sepia(0%) saturate(7500%) hue-rotate(315deg)
+      brightness(103%) contrast(102%);
+   --filter-primary-darken: invert(100%) sepia(0%) saturate(7500%)
+      hue-rotate(315deg) brightness(50%) contrast(102%);
+   --filter-secondary: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
+      brightness(101%) contrast(103%);
+   --filter-tertiary: invert(29%) sepia(99%) saturate(4621%) hue-rotate(305deg)
+      brightness(102%) contrast(102%);
+}
+
+[data-theme='light'] {
+   --text-primary: 32, 32, 32;
+   --text-secondary: 29, 240, 255;
+   --text-tertiary: 255, 29, 180;
+
+   --bg-primary: 235, 235, 235;
    --bg-secondary: 58, 58, 58;
 
    --filter-primary: invert(100%) sepia(0%) saturate(7500%) hue-rotate(315deg)

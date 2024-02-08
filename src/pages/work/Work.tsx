@@ -20,7 +20,7 @@ const Work = () => {
          <h1 className={styles.title}>Work</h1>
          <div className={styles.projectsContainer}>
             {Object.keys(list).map((key) => {
-               return <ProjectCard data={list[key]} />;
+               return <ProjectCard key={key} data={list[key]} />;
             })}
          </div>
       </div>
