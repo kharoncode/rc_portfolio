@@ -1,5 +1,12 @@
 .container {
+   position: relative;
    height: 100svh;
    width: 100%;
    display: flex;
+}
+
+.mainContainer {
+   position: relative;
+   flex-grow: 1;
+   overflow: hidden;
 }

@@ -1,0 +1,11 @@
+.container {
+   position: absolute;
+   padding: 20px;
+   display: flex;
+   flex-direction: column;
+   text-align: center;
+   text-justify: auto;
+   opacity: 0.08;
+   user-select: none;
+   text-transform: uppercase;
+}
