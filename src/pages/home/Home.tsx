@@ -4,9 +4,10 @@ const Home = () => {
    return (
       <div className={styles.container}>
          <h1 className={styles.title}>
-            Hi, my name is
+            <span className={styles.name}>{`{`}</span> Hello World{' '}
+            <span className={styles.name}>{`}`}</span>
             <br />
-            <span className={styles.name}>Rémi</span>, <br />
+            my name is <span className={styles.name}>Rémi</span>, <br />
             and i'm a <br />
             <span className={styles.name}>Front-End Developer</span> !
          </h1>
