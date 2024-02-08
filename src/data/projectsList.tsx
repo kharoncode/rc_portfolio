@@ -1,6 +1,7 @@
 export const projectsList = {
    buffTimer: {
       id: 'buffTimer',
+      date: '',
       name: 'BuffTimer',
       category: 'personnal',
       description:
@@ -11,6 +12,7 @@ export const projectsList = {
    },
    bob: {
       id: 'buffTimer',
+      date: '',
       name: 'Bob',
       category: 'personnal',
       description:
@@ -21,6 +23,7 @@ export const projectsList = {
    },
    hrnet: {
       id: 'hrnet',
+      date: '',
       name: 'HRnet',
       category: 'school',
       description: 'HRnet is an application that manages employee files.',
