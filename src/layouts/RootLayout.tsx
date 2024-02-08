@@ -10,7 +10,11 @@ const RootLayout = () => {
          <Header />
          <div className={styles.mainContainer}>
             <Lorem />
-            <main>
+            <main
+            /* onMouseMove={(e) =>
+                  console.log(`x:${e.clientX} - y${e.clientY}`)
+               } */
+            >
                <Outlet />
             </main>
          </div>

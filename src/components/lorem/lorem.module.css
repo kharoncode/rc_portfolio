@@ -6,8 +6,15 @@
    flex-direction: column;
    text-align: center;
    text-justify: auto;
-   opacity: 0.08;
    user-select: none;
    text-transform: uppercase;
    z-index: -1;
+   background: radial-gradient(
+      at 20% 10%,
+      rgba(var(--text-tertiary), 0.8) 1%,
+      rgba(var(--text-primary), 0.1) 5%,
+      rgba(var(--text-primary), 0.1) 100%
+   );
+   background-clip: text;
+   -webkit-text-fill-color: transparent;
 }
