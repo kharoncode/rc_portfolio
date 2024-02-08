@@ -2,10 +2,23 @@ import styles from './footer.module.css';
 import githubIcone from '@/assets/icones/github.svg';
 import linkedinIcone from '@/assets/icones/linkedin.svg';
 import mail from '@/assets/icones/mail.svg';
+import darkIcone from '@/assets/icones/dark.svg';
+import lightIcone from '@/assets/icones/light.svg';
+import { ThemeContext } from '@/router/App';
+import { useContext } from 'react';
 
 const Footer = () => {
+   const { theme, toggleTheme } = useContext(ThemeContext);
    return (
       <footer className={styles.container}>
+         <div className={styles.settings}>
+            <img
+               onClick={() => toggleTheme()}
+               className={`${styles.mode}`}
+               src={theme === 'dark' ? lightIcone : darkIcone}
+               alt={theme}
+            />
+         </div>
          <div className={styles.iconesContainer}>
             <a
                className={styles.a}

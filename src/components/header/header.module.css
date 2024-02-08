@@ -87,7 +87,3 @@
 .icone:hover {
    filter: var(--filter-tertiary);
 }
-
-.flag {
-   width: 20px;
-}
