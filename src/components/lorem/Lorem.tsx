@@ -1,6 +1,20 @@
+import { useEffect } from 'react';
 import styles from './lorem.module.css';
 
-const Lorem = () => {
+const Lorem = (props: { coordinate: string }) => {
+   const { coordinate } = props;
+   useEffect(() => {
+      const container = document.querySelector(`.${styles.container}`);
+      if (container) {
+         container.style.background = `radial-gradient(
+            at ${coordinate},
+            rgba(var(--text-tertiary), 0.8) 1%,
+            rgba(var(--text-primary), 0.1) 5%,
+            rgba(var(--text-primary), 0.1) 100%
+         )`;
+         container.style.backgroundClip = 'text';
+      }
+   }, [coordinate]);
    return (
       <div className={styles.container}>
          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
