@@ -9,11 +9,13 @@
    border-radius: 10px;
    overflow: hidden;
    gap: 10px;
+   transition-duration: 200ms;
 }
 
 .container:hover {
    box-shadow: rgba(var(--text-tertiary), 0.2) 0px 7px 29px 0px;
-   transition-duration: 300ms;
+   background-color: rgba(var(--bg-primary));
+   transition-duration: 400ms;
 }
 
 .container:hover .picture {

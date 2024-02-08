@@ -8,4 +8,5 @@
    opacity: 0.08;
    user-select: none;
    text-transform: uppercase;
+   z-index: -1;
 }
