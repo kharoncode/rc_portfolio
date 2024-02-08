@@ -2,7 +2,7 @@ import styles from './home.module.css';
 
 const Home = () => {
    return (
-      <>
+      <div className={styles.container}>
          <h1 className={styles.title}>
             Hi, my name is
             <br />
@@ -10,7 +10,7 @@ const Home = () => {
             and i'm a <br />
             <span className={styles.name}>Front-End Developer</span> !
          </h1>
-      </>
+      </div>
    );
 };
 

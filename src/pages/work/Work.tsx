@@ -18,7 +18,7 @@ const Work = () => {
    return (
       <div className={styles.container}>
          <h1 className={styles.title}>Work</h1>
-         <div className={styles.projectsContainer}>
+         <div className={styles.contentContainer}>
             {Object.keys(list).map((key) => {
                return <ProjectCard key={key} data={list[key]} />;
             })}
