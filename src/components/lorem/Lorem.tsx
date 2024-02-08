@@ -1,18 +1,22 @@
 import { useEffect } from 'react';
 import styles from './lorem.module.css';
 
-const Lorem = (props: { coordinate: string }) => {
+const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
    const { coordinate } = props;
    useEffect(() => {
-      const container = document.querySelector(`.${styles.container}`);
-      if (container) {
-         container.style.background = `radial-gradient(
-            at ${coordinate},
-            rgba(var(--text-tertiary), 0.8) 1%,
-            rgba(var(--text-primary), 0.1) 5%,
-            rgba(var(--text-primary), 0.1) 100%
-         )`;
-         container.style.backgroundClip = 'text';
+      if (coordinate != '') {
+         const container = document.querySelector<HTMLElement>(
+            `.${styles.container}`
+         );
+         if (container) {
+            container.style.background = `radial-gradient(
+               at ${coordinate},
+               rgba(var(--text-tertiary), 0.7) 1%,
+               rgba(var(--text-primary), 0.08) 5%,
+               rgba(var(--text-primary), 0.08) 100%
+            )`;
+            container.style.backgroundClip = 'text';
+         }
       }
    }, [coordinate]);
    return (

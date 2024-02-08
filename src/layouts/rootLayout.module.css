@@ -5,6 +5,16 @@
    display: flex;
 }
 
+.loremContainer {
+   position: absolute;
+   padding: 30px;
+   width: 100%;
+   height: 97svh;
+   overflow: hidden;
+   user-select: none;
+   z-index: -1;
+}
+
 .mainContainer {
    position: relative;
    flex-grow: 1;
