@@ -1,4 +1,5 @@
 .container {
+   position: relative;
    flex-grow: 0;
    flex-shrink: 0;
    display: flex;
@@ -23,45 +24,49 @@
    font-weight: 500;
 }
 
-.link img {
+.link .navIcone {
    width: 30px;
    filter: var(--filter-primary);
-   transition-duration: 100ms;
 }
 
 .link:hover {
    color: rgba(var(--text-tertiary));
 }
 
-.link:hover img {
+.link:hover .navIcone {
    filter: var(--filter-tertiary);
-   transition-duration: 300ms;
 }
 
-.link:nth-child(odd):hover img {
+.navIconeContainer {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   transition-duration: 200ms;
+}
+
+.link:nth-child(odd):hover .navIconeContainer {
    rotate: 10deg;
+   transition-duration: 400ms;
 }
 
-.link:nth-child(even):hover img {
+.link:nth-child(even):hover .navIconeContainer {
    rotate: -10deg;
+   transition-duration: 300ms;
 }
 
 .isActive {
    border-radius: 0 5px 5px 0;
    background-color: rgba(var(--text-tertiary));
-   color: rgba(var(--bg-primary));
+   color: rgba(var(--bg-primary)) !important;
 }
 
-.isActive img {
+.isActive .navIcone {
    filter: invert(7%) sepia(9%) saturate(17%) hue-rotate(11deg) brightness(107%)
       contrast(89%);
 }
 
-.isActive:hover {
-   color: rgba(var(--text-secondary));
-}
-
-.isActive:hover img {
+.isActive:hover .navIcone {
    filter: invert(7%) sepia(9%) saturate(17%) hue-rotate(11deg) brightness(107%)
       contrast(89%);
 }

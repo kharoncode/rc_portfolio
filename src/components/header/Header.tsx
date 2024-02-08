@@ -20,7 +20,9 @@ const Header = () => {
                }
                to={'/'}
             >
-               <img src={homeIcone} alt="Home" />
+               <div className={styles.navIconeContainer}>
+                  <img className={styles.navIcone} src={homeIcone} alt="Home" />
+               </div>
             </NavLink>
             <NavLink
                className={({ isActive }) =>
@@ -28,7 +30,9 @@ const Header = () => {
                }
                to={'/work'}
             >
-               <img src={workIcone} alt="Work" />
+               <div className={styles.navIconeContainer}>
+                  <img className={styles.navIcone} src={workIcone} alt="Work" />
+               </div>
             </NavLink>
             <NavLink
                className={({ isActive }) =>
@@ -36,7 +40,13 @@ const Header = () => {
                }
                to={'/about'}
             >
-               <img src={aboutIcone} alt="About" />
+               <div className={styles.navIconeContainer}>
+                  <img
+                     className={styles.navIcone}
+                     src={aboutIcone}
+                     alt="About"
+                  />
+               </div>
             </NavLink>
             <NavLink
                className={({ isActive }) =>
@@ -44,7 +54,13 @@ const Header = () => {
                }
                to={'/contact'}
             >
-               <img src={contactIcone} alt="Contact" />
+               <div className={styles.navIconeContainer}>
+                  <img
+                     className={styles.navIcone}
+                     src={contactIcone}
+                     alt="Contact"
+                  />
+               </div>
             </NavLink>
          </nav>
          <div className={styles.settings}>
