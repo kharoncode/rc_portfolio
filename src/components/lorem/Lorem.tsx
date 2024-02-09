@@ -1,8 +1,32 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import styles from './lorem.module.css';
+
+const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie diam eget elit sodales interdum. Duis quis dictum quam. Etiam tristique velit nec sapien finibus, non sagittis urna pellentesque. Fusce a lectus non purus tristique aliquet imperdiet sed felis. Donec gravida lacus a ipsum tincidunt pulvinar.`;
 
 const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
    const { coordinate } = props;
+
+   const [lorem, setLorem] = useState([loremIpsum]);
+   const h = window.innerHeight;
+
+   useEffect(() => {
+      console.log('init');
+      const container = document.querySelector<HTMLElement>(
+         `.${styles.container}`
+      );
+      if (container) {
+         if (container.offsetHeight < h * 1) {
+            const newLorem = [...lorem];
+            newLorem.push(loremIpsum);
+            setLorem(newLorem);
+         } else if (container.offsetHeight > h * 1.1) {
+            const newLorem = [...lorem];
+            newLorem.pop();
+            setLorem(newLorem);
+         }
+      }
+   }, [h, lorem]);
+
    useEffect(() => {
       if (coordinate != '') {
          const container = document.querySelector<HTMLElement>(
@@ -21,7 +45,8 @@ const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
    }, [coordinate]);
    return (
       <div className={styles.container}>
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
+         {lorem.map((el) => el)}
+         {/* Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
          malesuada lacus ut nibh scelerisque commodo. Sed pulvinar vehicula
          justo, id pulvinar turpis suscipit in. Curabitur et velit neque.
          Curabitur consectetur laoreet orci vel rutrum. Nulla tempus nulla vel
@@ -247,7 +272,7 @@ const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
          bibendum sem id tempus. Nullam risus turpis, fringilla et tempor
          consequat, hendrerit id metus. Pellentesque dignissim quam sed tellus
          semper efficitur. Sed ut tempus dui. Aliquam dictum magna eget tempor
-         volutpat.
+         volutpat. */}
       </div>
    );
 };
