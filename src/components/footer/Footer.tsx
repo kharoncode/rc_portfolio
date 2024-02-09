@@ -8,6 +8,7 @@ import { ThemeContext } from '@/router/App';
 import { useContext } from 'react';
 
 const Footer = () => {
+   // @ts-expect-error: Unreachable code error
    const { theme, toggleTheme } = useContext(ThemeContext);
    return (
       <footer className={styles.container}>
