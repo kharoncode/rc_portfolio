@@ -5,21 +5,6 @@ import styles from './rootLayout.module.css';
 import Lorem from '@/components/lorem/Lorem';
 import { useState } from 'react';
 
-const percentage = (x: number, y: number) => {
-   const container = document.querySelector<HTMLElement>(
-      `.${styles.mainContainer}`
-   );
-   let result = '';
-   if (container) {
-      const width = container?.offsetWidth;
-      const height = container?.offsetHeight;
-      const left = Math.round((x * 100) / width);
-      const h = Math.round((y * 100) / height);
-      result = `${left}% ${h}%`;
-   }
-   return result;
-};
-
 const RootLayout = () => {
    const [coordinate, setCoordinate] = useState('');
    const [isMouseHover, setIsMouseHover] = useState(false);
@@ -32,7 +17,7 @@ const RootLayout = () => {
             </div>
             <main
                onMouseMove={(e) => {
-                  setCoordinate(percentage(e.clientX, e.clientY));
+                  setCoordinate(`${e.clientX}px ${e.clientY}px`);
                }}
                onMouseEnter={() => setIsMouseHover(true)}
                onMouseLeave={() => setIsMouseHover(false)}
