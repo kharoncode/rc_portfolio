@@ -1,6 +1,7 @@
 .container {
+   width: 50px;
+   padding: 20px 0 20px 0;
    flex-grow: 0;
-   padding: 20px;
    display: flex;
    flex-direction: column;
    justify-content: space-between;
@@ -46,4 +47,10 @@
 .a:nth-child(even):hover .navIconeContainer {
    rotate: -10deg;
    transition-duration: 400ms;
+}
+
+.settings {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
