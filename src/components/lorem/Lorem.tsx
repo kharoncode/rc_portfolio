@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import styles from './lorem.module.css';
 
-const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie diam eget elit sodales interdum. Duis quis dictum quam. Etiam tristique velit nec sapien finibus, non sagittis urna pellentesque. Fusce a lectus non purus tristique aliquet imperdiet sed felis. Donec gravida lacus a ipsum tincidunt pulvinar.`;
+const loremIpsum = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras molestie diam eget elit sodales interdum. Duis quis dictum quam. Etiam tristique velit nec sapien finibus, non sagittis urna pellentesque. Fusce a lectus non purus tristique aliquet imperdiet sed felis. Donec gravida lacus a ipsum tincidunt pulvinar. Etiam ultrices fermentum ligula ac sodales. Fusce id iaculis massa, vitae elementum elit.`;
 
 const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
    const { coordinate } = props;
@@ -10,7 +10,6 @@ const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
    const h = window.innerHeight;
 
    useEffect(() => {
-      console.log('init');
       const container = document.querySelector<HTMLElement>(
          `.${styles.container}`
       );
