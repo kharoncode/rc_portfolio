@@ -17,7 +17,7 @@ const RootLayout = () => {
             </div>
             <main
                onMouseMove={(e) => {
-                  setCoordinate(`${e.clientX}px ${e.clientY}px`);
+                  setCoordinate(`${e.clientX - 70}px ${e.clientY - 20}px`);
                }}
                onMouseEnter={() => setIsMouseHover(true)}
                onMouseLeave={() => setIsMouseHover(false)}
