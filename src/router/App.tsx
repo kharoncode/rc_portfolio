@@ -21,6 +21,7 @@ const App = () => {
       setTheme((curr) => (curr === 'light' ? 'dark' : 'light'));
       document.querySelector('body')?.setAttribute('data-theme', theme);
    };
+
    const router = createBrowserRouter([
       {
          path: '/',
@@ -31,7 +32,7 @@ const App = () => {
                element: <Home />,
             },
             {
-               path: 'work',
+               path: '/work',
                element: <Work />,
             },
             /* {
@@ -40,15 +41,15 @@ const App = () => {
             }, */
 
             {
-               path: 'about',
+               path: '/about',
                element: <About />,
             },
             {
-               path: 'contact',
+               path: '/contact',
                element: <Contact />,
             },
             {
-               path: '*',
+               path: '/*',
                element: <Error />,
             },
          ],

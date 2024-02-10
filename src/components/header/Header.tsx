@@ -1,5 +1,5 @@
-import { NavLink } from 'react-router-dom';
 import styles from './header.module.css';
+import { NavLink } from 'react-router-dom';
 import homeIcone from '@/assets/icones/home.svg';
 import workIcone from '@/assets/icones/work.svg';
 import aboutIcone from '@/assets/icones/about.svg';
