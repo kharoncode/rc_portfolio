@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from '@/pages/home/Home';
 import Error from '@/pages/error/error';
 import RootLayout from '@/layouts/RootLayout';
@@ -22,7 +22,7 @@ const App = () => {
       document.querySelector('body')?.setAttribute('data-theme', theme);
    };
 
-   const router = createBrowserRouter([
+   const router = createHashRouter([
       {
          path: '/',
          element: <RootLayout />,
