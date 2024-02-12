@@ -33,6 +33,10 @@
    },
 
    "about": {
+      "title": {
+         "en": "About",
+         "fr": "A propos"
+      },
       "picture": "",
       "content": {
          "en": [
