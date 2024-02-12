@@ -13,7 +13,7 @@ const RootLayout = () => {
    const { loading, data } = useSelector(getData);
    const theme = useSelector(getTheme);
    useEffect(() => {
-      if (Object.keys(data).length === 0) {
+      if (data.init) {
          dispatch(fetchData());
       }
       document.querySelector('body')?.setAttribute('data-theme', theme);

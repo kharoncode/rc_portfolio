@@ -2,20 +2,22 @@ import styles from './projectCard.module.css';
 import eyeIcone from '@/assets/icones/eye.svg';
 import eyeSlashIcone from '@/assets/icones/eye_slash.svg';
 import gitHubIcone from '@/assets/icones/githubProject.svg';
+import { contentLangue } from '@/layouts/dataSlice';
 import { Link } from 'react-router-dom';
 
 type props = {
+   langue: string;
    data: {
       id: string;
       name: string;
-      description: string;
+      description: contentLangue;
       tag: string[];
       github: string;
       link: string;
    };
 };
 
-const ProjectCard = ({ data }: props) => {
+const ProjectCard = ({ data, langue }: props) => {
    const { id, name, description, github, link } = data;
    return (
       <div className={styles.container}>
@@ -52,7 +54,7 @@ const ProjectCard = ({ data }: props) => {
          </div>
          <div className={styles.info}>
             <h3>{name}</h3>
-            <p>{description}</p>
+            <p>{description[langue]}</p>
          </div>
       </div>
    );

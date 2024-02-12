@@ -9,6 +9,10 @@ export const getAbout = (state: RootState) => {
    return getData(state).data.about;
 };
 
+export const getWork = (state: RootState) => {
+   return getData(state).data.work;
+};
+
 // Settings
 export const getTheme = (state: RootState) => {
    return state?.settings.theme;

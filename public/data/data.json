@@ -1,5 +1,13 @@
 {
+   "init": false,
+   "home": {
+      "title": { "en": "", "fr": "" }
+   },
    "work": {
+      "title": {
+         "en": "Work",
+         "fr": "Projects"
+      },
       "tag": {
          "react": {
             "name": "React",
@@ -13,7 +21,8 @@
             "name": "BuffTimer",
             "category": "personnal",
             "description": {
-               "en": "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs."
+               "en": "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs.",
+               "fr": "Il s'agit d'une application qui permet de voir facilement quel Buff est actif et sur qui. Elle permet également de connaître l'état de santé des joueurs et leurs besoins."
             },
             "tag": ["react", "redux", "redux_tlk", "api", "mobile"],
             "github": "https://github.com/kharoncode/BuffTimer",
@@ -24,7 +33,10 @@
             "date": "",
             "name": "HRnet",
             "category": "school",
-            "description": "HRnet is an application that manages employee files.",
+            "description": {
+               "en": "HRnet is an application that manages employee files.",
+               "fr": "HRnet est une application qui gère les dossiers des employés."
+            },
             "tag": ["react", "redux", "redux_tlk", "npm"],
             "github": "https://github.com/kharoncode/OC-P14-HRNet",
             "link": "https://www.npmjs.com/package/hrnet-packages"

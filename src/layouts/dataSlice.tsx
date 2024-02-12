@@ -8,12 +8,14 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
       });
 });
 
-type contentLangue = {
+export type contentLangue = {
    [key: string]: string[];
 };
 
 type data = {
+   init: boolean;
    work: {
+      title: contentLangue;
       tag: { [key: string]: { [key: string]: string } };
       projects: {
          [key: string]: {
@@ -21,7 +23,7 @@ type data = {
             date: string;
             name: string;
             category: string;
-            description: string;
+            description: contentLangue;
             tag: string[];
             github: string;
             link: string;
@@ -43,7 +45,8 @@ type dataState = {
 const initialState: dataState = {
    loading: false,
    data: {
-      work: { tag: {}, projects: {} },
+      init: true,
+      work: { title: {}, tag: {}, projects: {} },
       about: { title: {}, content: {} },
    },
    error: undefined,
