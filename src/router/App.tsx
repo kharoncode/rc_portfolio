@@ -6,6 +6,9 @@ import Work from '@/pages/work/Work';
 import About from '@/pages/about/About';
 import Contact from '@/pages/contact/Contact';
 import { createContext, useState } from 'react';
+import { persistor, store } from './store';
+import { Provider } from 'react-redux';
+import { PersistGate } from 'redux-persist/integration/react';
 //import Projects from '@/pages/projects/Projects';
 
 type themeContextT = {
@@ -58,9 +61,13 @@ const App = () => {
 
    return (
       <>
-         <ThemeContext.Provider value={{ theme, toggleTheme }}>
-            <RouterProvider router={router} />
-         </ThemeContext.Provider>
+         <Provider store={store}>
+            <PersistGate loading={null} persistor={persistor}>
+               <ThemeContext.Provider value={{ theme, toggleTheme }}>
+                  <RouterProvider router={router} />
+               </ThemeContext.Provider>
+            </PersistGate>
+         </Provider>
       </>
    );
 };
