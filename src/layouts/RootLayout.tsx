@@ -3,11 +3,14 @@ import Header from '@/components/header/Header';
 import { Outlet } from 'react-router-dom';
 import styles from './rootLayout.module.css';
 import Lorem from '@/components/lorem/Lorem';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const RootLayout = () => {
    const [coordinate, setCoordinate] = useState('');
    const [isMouseHover, setIsMouseHover] = useState(false);
+   useEffect(() => {
+      console.log('init layout');
+   }, []);
    return (
       <div className={styles.container}>
          <Header />
