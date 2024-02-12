@@ -53,6 +53,7 @@
    background: rgba(var(--input));
    border: none;
    outline: none;
+   border-radius: 5px;
 }
 
 .inputText {
