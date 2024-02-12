@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import styles from './about.module.css';
+import portrait from '@/assets/pictures/about.png';
 import { getAbout, getLangue } from '@/router/selectors';
 
 const About = () => {
@@ -9,6 +10,11 @@ const About = () => {
       <div className={styles.container}>
          <h1 className={styles.title}>{title[langue]}</h1>
          <div className={styles.contentContainer}>
+            <img
+               src={portrait}
+               alt="Portait de Rémi"
+               className={styles.picture}
+            />
             {content[langue].map((el, index) => (
                <p key={index} className={styles.paragraph}>
                   {el}

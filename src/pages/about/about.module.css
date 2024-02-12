@@ -25,3 +25,7 @@
    width: 80%;
    font-size: x-large;
 }
+
+.picture {
+   border-radius: 5px;
+}

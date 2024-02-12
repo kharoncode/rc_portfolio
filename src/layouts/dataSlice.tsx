@@ -8,15 +8,44 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
       });
 });
 
+type contentLangue = {
+   [key: string]: string[];
+};
+
+type data = {
+   work: {
+      tag: { [key: string]: { [key: string]: string } };
+      projects: {
+         [key: string]: {
+            id: string;
+            date: string;
+            name: string;
+            category: string;
+            description: string;
+            tag: string[];
+            github: string;
+            link: string;
+         };
+      };
+   };
+   about: {
+      title: contentLangue;
+      content: contentLangue;
+   };
+};
+
 type dataState = {
    loading: boolean;
-   data: { [key: string]: { [key: string]: 'string' } };
+   data: data;
    error: string | undefined;
 };
 
 const initialState: dataState = {
    loading: false,
-   data: {},
+   data: {
+      work: { tag: {}, projects: {} },
+      about: { title: {}, content: {} },
+   },
    error: undefined,
 };
 
