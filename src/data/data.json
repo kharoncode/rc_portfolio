@@ -1,0 +1,41 @@
+{
+   "work": {
+      "tag": {
+         "react": {
+            "name": "React",
+            "picture": "react.png"
+         }
+      },
+      "projects": {
+         "buffTimer": {
+            "id": "buffTimer",
+            "date": "",
+            "name": "BuffTimer",
+            "category": "personnal",
+            "description": "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs.",
+            "tag": ["react", "redux", "redux_tlk", "api", "mobile"],
+            "github": "https://github.com/kharoncode/BuffTimer",
+            "link": "https://www.collinremi.com/website/bufftimer"
+         },
+         "hrnet": {
+            "id": "hrnet",
+            "date": "",
+            "name": "HRnet",
+            "category": "school",
+            "description": "HRnet is an application that manages employee files.",
+            "tag": ["react", "redux", "redux_tlk", "npm"],
+            "github": "https://github.com/kharoncode/OC-P14-HRNet",
+            "link": "https://www.npmjs.com/package/hrnet-packages"
+         }
+      }
+   },
+
+   "about": {
+      "picture": "",
+      "content": [
+         "Hi, I'm Rémi, a passionate developer who loves taking on challenges to make every project a reality.",
+         "With a mind brimming with imagination, I love looking for and above all finding ways of turning into reality all the crazy ideas that pop into my head. My time at the Beaux Arts in Geneva enabled me to unleash this full potential, which I can now express through lines of code.",
+         "I hope you'll enjoy the projects I've created, and don't hesitate to let me know what you think, or to submit any crazy ideas that will fuel my creativity!"
+      ]
+   }
+}
