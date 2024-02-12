@@ -4,19 +4,32 @@ import linkedinIcone from '@/assets/icones/linkedin.svg';
 import mail from '@/assets/icones/mail.svg';
 import darkIcone from '@/assets/icones/dark.svg';
 import lightIcone from '@/assets/icones/light.svg';
-import { ThemeContext } from '@/router/App';
-import { useContext } from 'react';
+import { useSelector } from 'react-redux';
+import { getTheme } from '@/router/selectors';
+import { store } from '@/router/store';
+import { settingsSlice } from '@/layouts/settingsSlice';
 
 const Footer = () => {
-   //@ts-expect-error: Unreachable code error
-   const { theme, toggleTheme } = useContext(ThemeContext);
+   const theme = useSelector(getTheme);
    return (
       <footer className={styles.container}>
          <div className={styles.settings}>
             <img
-               onClick={() => toggleTheme()}
+               onClick={() => {
+                  store.dispatch(
+                     settingsSlice.actions.toggleTheme(
+                        theme === 'dark' ? 'light' : 'dark'
+                     )
+                  );
+                  document
+                     .querySelector('body')
+                     ?.setAttribute(
+                        'data-theme',
+                        theme === 'dark' ? 'light' : 'dark'
+                     );
+               }}
                className={`${styles.mode}`}
-               src={theme === 'dark' ? lightIcone : darkIcone}
+               src={theme === 'dark' ? darkIcone : lightIcone}
                alt={theme}
             />
          </div>
