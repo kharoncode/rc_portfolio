@@ -29,6 +29,7 @@
 }
 
 .pictureContainer {
+   border-radius: 6px 6px 0 0;
    position: relative;
    width: 100%;
    overflow: hidden;
@@ -36,6 +37,7 @@
 
 .picture {
    filter: brightness(90%);
+   border-radius: 6px 6px 0 0;
    object-fit: cover;
    width: 100%;
    height: 200px;

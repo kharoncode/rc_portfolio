@@ -36,6 +36,19 @@
             "github": "https://github.com/kharoncode/rc_portfolio",
             "link": "https://www.collinremi.com"
          },
+         "hrnet": {
+            "id": "hrnet",
+            "date": "12/01/2024",
+            "name": "HRnet",
+            "category": "school",
+            "description": {
+               "en": "HRnet is an application that manages employee files.",
+               "fr": "HRnet est une application qui gère les dossiers des employés."
+            },
+            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
+            "github": "https://github.com/kharoncode/OC-P14-HRNet",
+            "link": ""
+         },
          "buffTimer": {
             "id": "buffTimer",
             "date": "20/12/2023",
@@ -57,17 +70,17 @@
             "github": "https://github.com/kharoncode/BuffTimer",
             "link": "https://www.collinremi.com/website/bufftimer"
          },
-         "hrnet": {
-            "id": "hrnet",
-            "date": "12/01/2024",
-            "name": "HRnet",
+         "argent_bank": {
+            "id": "argent_bank",
+            "date": "11/12/2024",
+            "name": "Argent Bank",
             "category": "school",
             "description": {
-               "en": "HRnet is an application that manages employee files.",
-               "fr": "HRnet est une application qui gère les dossiers des employés."
+               "en": "An authentication page for a banking application.",
+               "fr": "Une page d'authentification d'une application bancaire."
             },
-            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
-            "github": "https://github.com/kharoncode/OC-P14-HRNet",
+            "tag": ["react", "redux", "redux_tlk", "api", "desktop", "school"],
+            "github": "https://github.com/kharoncode/OC-P13",
             "link": ""
          },
          "sportsee": {
@@ -76,12 +89,51 @@
             "name": "SportSee",
             "category": "school",
             "description": {
-               "en": "HRnet is an application that manages employee files.",
-               "fr": "HRnet est une application qui gère les dossiers des employés."
+               "en": "An analytical dashboard for a sports application.",
+               "fr": "Un tableau de bord analytique pour une application sportive."
             },
-            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
-            "github": "https://github.com/kharoncode/OC-P14-HRNet",
+            "tag": ["react", "desktop", "api", "school"],
+            "github": "https://github.com/kharoncode/OC-P12",
             "link": ""
+         },
+         "kaza": {
+            "id": "kaza",
+            "date": "25/10/2023",
+            "name": "Kaza",
+            "category": "school",
+            "description": {
+               "en": "Website for renting flats between private individuals.",
+               "fr": "Site de mise en location d’appartements entre particuliers."
+            },
+            "tag": ["react", "desktop", "mobile", "school"],
+            "github": "https://github.com/kharoncode/OC-P11",
+            "link": ""
+         },
+         "les_petits_plats": {
+            "id": "les_petits_plats",
+            "date": "05/06/2023",
+            "name": "Les petits plats",
+            "category": "school",
+            "description": {
+               "en": "Cooking recipes website with the option of sorting your search by tags or using the search field.",
+               "fr": "Site de recettes de cuisine avec possibilité de trier sa recherche par tags ou avec le champ de recherche."
+            },
+            "tag": ["js", "desktop", "mobile", "school"],
+            "github": "https://github.com/kharoncode/OC-P7",
+            "link": "https://kharoncode.github.io/OC-P7"
+         },
+         "fisheye": {
+            "id": "fisheye",
+            "date": "11/04/2023",
+            "name": "Fisheye",
+            "category": "school",
+            "description": {
+               "en": "FishEye is an accessible website that allows freelance photographers to showcase their work.",
+               "fr": "FishEye est un site web accessible qui permet aux photographes indépendants de présenter leurs travaux."
+            },
+            "tag": ["js", "desktop", "mobile", "school"],
+            "github": "https://github.com/kharoncode/Front-End-Fisheye",
+            "link": "https://kharoncode.github.io/Front-End-Fisheye/"
          }
       }
    },
