@@ -23,6 +23,7 @@ const ProjectCard = ({ data, langue }: props) => {
       <div className={styles.container}>
          <div className={styles.pictureContainer}>
             <img
+               loading="lazy"
                className={styles.picture}
                src={`./pictures/projects/${id}.png`}
                alt="BF"
