@@ -1,28 +1,35 @@
 import styles from './tag.module.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 type props = {
    el: string;
    list: string[];
    setList: React.Dispatch<React.SetStateAction<string[]>>;
+   reset: boolean;
 };
 
 const Tag = (props: props) => {
-   const { el, list, setList } = props;
+   const { el, list, setList, reset } = props;
    const [isSelected, setIsSelected] = useState(false);
-   const copy = [...list];
+
+   useEffect(() => {
+      setIsSelected(false);
+   }, [reset]);
+
    const tagSelect = () => {
+      const temp = [...list];
       setIsSelected(!isSelected);
       if (!isSelected) {
-         if (!copy.includes(el)) {
-            copy.push(el);
+         if (!temp.includes(el)) {
+            temp.push(el);
          }
       } else {
-         const index = copy.indexOf(el);
-         copy.splice(index, 1);
+         const index = temp.indexOf(el);
+         temp.splice(index, 1);
       }
-      setList(copy);
+      setList(temp);
    };
+
    return (
       <div
          className={`${styles.container} ${isSelected ? styles.selected : ''}`}
@@ -32,7 +39,11 @@ const Tag = (props: props) => {
             tagSelect();
          }}
       >
-         {el}
+         <img
+            className={styles.icone}
+            src={`./pictures/tags/${el}.svg`}
+            alt={el}
+         />
       </div>
    );
 };

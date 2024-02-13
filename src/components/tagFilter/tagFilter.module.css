@@ -1,20 +1,18 @@
 .container {
    display: flex;
    align-items: center;
-   justify-content: center;
-   opacity: 0.6;
 }
 
-.container:hover {
-   opacity: 0.9;
-}
-
-.selected {
-   opacity: 1;
+.tagsContainer {
+   padding: 0 10px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
 }
 
 .icone {
    width: 20px;
+   height: 30px;
    filter: var(--filter-primary);
 }
 

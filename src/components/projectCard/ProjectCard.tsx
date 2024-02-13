@@ -24,7 +24,7 @@ const ProjectCard = ({ data, langue }: props) => {
          <div className={styles.pictureContainer}>
             <img
                className={styles.picture}
-               src={`./pictures/${id}.png`}
+               src={`./pictures/projects/${id}.png`}
                alt="BF"
             />
             <div className={styles.hoverCard}>

@@ -1,5 +1,8 @@
+import styles from './tagFilter.module.css';
+import filterIcone from '@/assets/icones/filter.svg';
+import resetIcone from '@/assets/icones/reset.svg';
 import { getWork } from '@/router/selectors';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import Tag from '../tag/Tag';
 
@@ -11,9 +14,11 @@ const TagFilter = (props: props) => {
    const { setList } = props;
    const { projects, tag } = useSelector(getWork);
    const [tagList, setTagList] = useState(['']);
-   const raw = Object.keys(projects);
+   const [reset, setReset] = useState(false);
+   const [open, setOpen] = useState(false);
 
-   const handleTag = () => {
+   const filter = () => {
+      const raw = Object.keys(projects);
       let tempList = raw;
       if (tagList.length !== 0) {
          tagList.map((value) => {
@@ -32,7 +37,6 @@ const TagFilter = (props: props) => {
             });
             tempList = newList;
          });
-
          setList(tempList);
       } else {
          tempList = raw;
@@ -40,31 +44,52 @@ const TagFilter = (props: props) => {
       }
    };
 
+   useEffect(() => {
+      filter();
+      /* eslint-disable */
+   }, [tagList]);
+   /* eslint-enable */
+
    return (
-      <>
-         <div>
-            {Object.keys(tag).map((el) => {
-               return (
-                  <Tag key={el} el={el} list={tagList} setList={setTagList} />
-               );
-            })}
-         </div>
-         <button
+      <div className={styles.container}>
+         <img
+            className={styles.icone}
+            src={filterIcone}
+            alt="Filter"
             onClick={() => {
-               setList(Object.keys(projects));
-               setTagList(['']);
+               setOpen(!open);
             }}
-         >
-            Reset
-         </button>
-         <button
-            onClick={() => {
-               handleTag();
-            }}
-         >
-            Tag Filter
-         </button>
-      </>
+         />
+         {open ? (
+            <>
+               <div className={styles.tagsContainer}>
+                  {Object.keys(tag).map((el) => {
+                     return (
+                        <Tag
+                           key={el}
+                           el={el}
+                           list={tagList}
+                           setList={setTagList}
+                           reset={reset}
+                        />
+                     );
+                  })}
+               </div>
+               <img
+                  className={styles.icone}
+                  src={resetIcone}
+                  alt="Close"
+                  onClick={() => {
+                     setList(Object.keys(projects));
+                     setTagList(['']);
+                     setReset(!reset);
+                  }}
+               />
+            </>
+         ) : (
+            <></>
+         )}
+      </div>
    );
 };
 

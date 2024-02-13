@@ -12,11 +12,7 @@
          "fr": "Projects"
       },
       "tag": {
-         "react": "React",
-         "redux": "Redux",
-         "redux_tlk": "Redux TLK",
-         "mobile": "Mobile",
-         "desktop": "Desktop",
+         "professional": "Professional",
          "personnal": "Personnal",
          "school": "School"
       },
