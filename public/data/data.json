@@ -1,7 +1,10 @@
 {
    "init": false,
    "home": {
-      "title": { "en": "", "fr": "" }
+      "title": {
+         "en": ["my name is", "and i'm a", "Front-End Developer"],
+         "fr": ["je m'appelle", "et je suis un", "Développeur Front-End"]
+      }
    },
    "work": {
       "title": {
@@ -9,41 +12,71 @@
          "fr": "Projects"
       },
       "tag": {
-         "react": {
-            "name": "React",
-            "picture": "react.png"
-         }
+         "react": "React",
+         "redux": "Redux",
+         "redux_tlk": "Redux TLK",
+         "mobile": "Mobile",
+         "desktop": "Desktop",
+         "personnal": "Personnal",
+         "school": "School"
       },
       "projects": {
+         "portfolio_2024": {
+            "id": "portfolio_2024",
+            "date": "12/02/2024",
+            "name": "Portfolio 2024",
+            "category": "personnal",
+            "description": {
+               "en": "The first design in my portfolio, created in 2024 after I finished my learning. ",
+               "fr": "Le premier design de mon portfolio réalisé en 2024 après la fin de ma formation."
+            },
+            "tag": [
+               "react",
+               "redux",
+               "redux_tlk",
+               "mobile",
+               "desktop",
+               "personnal"
+            ],
+            "github": "https://github.com/kharoncode/rc_portfolio",
+            "link": "https://www.collinremi.com"
+         },
          "buffTimer": {
             "id": "buffTimer",
-            "date": "",
+            "date": "20/12/2023",
             "name": "BuffTimer",
             "category": "personnal",
             "description": {
                "en": "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs.",
                "fr": "Il s'agit d'une application qui permet de voir facilement quel Buff est actif et sur qui. Elle permet également de connaître l'état de santé des joueurs et leurs besoins."
             },
-            "tag": ["react", "redux", "redux_tlk", "api", "mobile"],
+            "tag": [
+               "react",
+               "redux",
+               "redux_tlk",
+               "api",
+               "mobile",
+               "desktop",
+               "personnal"
+            ],
             "github": "https://github.com/kharoncode/BuffTimer",
             "link": "https://www.collinremi.com/website/bufftimer"
          },
          "hrnet": {
             "id": "hrnet",
-            "date": "",
+            "date": "12/01/2024",
             "name": "HRnet",
             "category": "school",
             "description": {
                "en": "HRnet is an application that manages employee files.",
                "fr": "HRnet est une application qui gère les dossiers des employés."
             },
-            "tag": ["react", "redux", "redux_tlk", "npm"],
+            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P14-HRNet",
-            "link": "https://www.npmjs.com/package/hrnet-packages"
+            "link": ""
          }
       }
    },
-
    "about": {
       "title": {
          "en": "About",
@@ -60,6 +93,22 @@
             "Avec un esprit débordant d’imagination, j’aime chercher et surtout trouver le moyen de concrétiser toutes les idées saugrenues qui me passent par la tête. Mon passage aux Beaux Arts de Genève m’aura permis de libérer ce plein potentiel que je peux aujourd’hui exprimé via des lignes de codes.",
             "J’espère que vous saurez apprécier les projets que j’ai réalisé et n’hésitez pas à me faire pars de votre ressentit ou de me soumettre des idées loufoques qui viendront alimenté ma créativité !"
          ]
+      }
+   },
+   "contact": {
+      "content": {
+         "en": [
+            "Feel free to Contact me by submitting the form below and I will get back to you as soon as possible."
+         ],
+         "fr": [
+            "N'hésitez pas à me contacter en remplissant le formulaire ci-dessous et je vous répondrai dans les plus brefs délais."
+         ]
+      },
+      "input": {
+         "name": {
+            "en": ["Name"],
+            "fr": ["Nom"]
+         }
       }
    }
 }

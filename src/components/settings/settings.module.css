@@ -1,0 +1,116 @@
+@keyframes slidein {
+   from {
+      translate: 50px;
+   }
+   to {
+      translate: 0;
+   }
+}
+
+@keyframes reverseslidein {
+   from {
+      translate: 0;
+   }
+   to {
+      translate: 50px;
+   }
+}
+
+@keyframes slideopacity {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}
+
+@keyframes reverseOp {
+   from {
+      opacity: 1;
+   }
+   to {
+      opacity: 0;
+   }
+}
+
+@keyframes gearRotate {
+   from {
+      rotate: 0deg;
+   }
+   to {
+      rotate: 360deg;
+   }
+}
+
+.contenair {
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.settingsContenair {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   overflow: hidden;
+   animation: ease-in 1ms 400ms both slideopacity;
+}
+
+.settings {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 10px;
+   animation: ease-in 1ms 400ms both reverseslidein;
+}
+
+.open {
+   animation: ease-in both slidein;
+}
+
+.gear {
+   cursor: pointer;
+   width: 20px;
+   filter: var(--filter-primary);
+}
+
+.gear:hover {
+   animation: 3s linear infinite running gearRotate;
+   filter: var(--filter-tertiary);
+}
+
+.flag {
+   cursor: pointer;
+   width: 20px;
+   filter: opacity(0.8);
+}
+
+.flag:hover {
+   filter: initial;
+}
+
+.moon {
+   cursor: pointer;
+   width: 20px;
+   height: 20px;
+   filter: var(--filter-primary);
+}
+
+.moon:hover {
+   filter: var(--filter-tertiary);
+}
+
+.settingIcone {
+   animation: ease-in 300ms both reverseOp;
+}
+
+.openSetting {
+   animation: ease-in 400ms 1ms both slideopacity;
+}
+
+.toggleSettings {
+   visibility: hidden;
+}

@@ -5,12 +5,20 @@ export const getData = (state: RootState) => {
    return state?.data;
 };
 
+export const getHome = (state: RootState) => {
+   return getData(state).data.home;
+};
+
 export const getAbout = (state: RootState) => {
    return getData(state).data.about;
 };
 
 export const getWork = (state: RootState) => {
    return getData(state).data.work;
+};
+
+export const getContact = (state: RootState) => {
+   return getData(state).data.contact;
 };
 
 // Settings

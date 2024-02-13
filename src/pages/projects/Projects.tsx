@@ -1,16 +1,17 @@
 import { Navigate, useParams } from 'react-router-dom';
 import styles from './projects.module.css';
-import { projectsList } from '@/data/projectsList';
-import { projectsListT } from '../work/Work';
+import { useSelector } from 'react-redux';
+import { getWork } from '@/router/selectors';
 
 const Projects = () => {
+   const { projects } = useSelector(getWork);
+
    const { projectId } = useParams();
-   const list: projectsListT = projectsList;
    const id = projectId ? projectId : '';
-   if (!list[id]) {
+   if (!projects[id]) {
       return <Navigate to={'/work'} />;
    }
-   const data = list[id];
+   const data = projects[id];
    return <div className={styles.container}>Projet {data.name}</div>;
 };
 

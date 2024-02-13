@@ -5,21 +5,19 @@ import Main from '@/components/main/Main';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData, getTheme } from '@/router/selectors';
-import { fetchData } from './dataSlice';
 import { AppDispatch } from '@/router/store';
+import { fetchData } from './dataSlice';
 
 const RootLayout = () => {
    const dispatch = useDispatch<AppDispatch>();
-   const { loading, data } = useSelector(getData);
    const theme = useSelector(getTheme);
+   const { loading, data } = useSelector(getData);
+   if (data.init) {
+      dispatch(fetchData());
+   }
    useEffect(() => {
-      if (data.init) {
-         dispatch(fetchData());
-      }
       document.querySelector('body')?.setAttribute('data-theme', theme);
-      /* eslint-disable */
    }, []);
-   /* eslint-enable */
    return (
       <>
          {loading ? (

@@ -1,4 +1,5 @@
 .container {
+   position: relative;
    width: 50px;
    padding: 20px 20px 20px 0;
    flex-grow: 0;
@@ -22,18 +23,6 @@
    filter: var(--filter-tertiary);
 }
 
-.settingsIcone {
-   width: 20px;
-}
-
-.mode {
-   filter: var(--filter-primary);
-}
-
-.mode:hover {
-   filter: var(--filter-tertiary);
-}
-
 .navIconeContainer {
    width: 100%;
    display: flex;
@@ -50,10 +39,4 @@
 .a:nth-child(even):hover .navIconeContainer {
    rotate: -10deg;
    transition-duration: 400ms;
-}
-
-.settings {
-   display: flex;
-   align-items: center;
-   justify-content: center;
 }

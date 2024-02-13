@@ -1,8 +1,12 @@
 import { type FormEvent } from 'react';
 import styles from './contact.module.css';
 import sendIcone from '@/assets/icones/send.svg';
+import { useSelector } from 'react-redux';
+import { getContact, getLangue } from '@/router/selectors';
 
 const Contact = () => {
+   const { content, input } = useSelector(getContact);
+   const langue = useSelector(getLangue);
    const data = {
       service_id: import.meta.env.VITE_SERVICE_ID,
       template_id: import.meta.env.VITE_TEMPLATE_ID,
@@ -34,14 +38,11 @@ const Contact = () => {
       <div className={styles.container}>
          <h1 className={styles.title}>Contact</h1>
          <div className={styles.contentContainer}>
-            <h2>
-               Feel free to Contact me by submitting the form below and I will
-               get back to you as soon as possible.
-            </h2>
+            <h2>{content[langue][0]}</h2>
             <form className={styles.form} onSubmit={handleSubmit}>
                <div className={styles.labelContainer}>
                   <label className={styles.label} htmlFor="contact_name">
-                     Name
+                     {input.name[langue][0]}
                   </label>
                   <input
                      className={`${styles.inputText} ${styles.input}`}
