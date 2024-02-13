@@ -1,39 +1,3 @@
-@keyframes slidein {
-   from {
-      translate: 50px;
-   }
-   to {
-      translate: 0;
-   }
-}
-
-@keyframes reverseslidein {
-   from {
-      translate: 0;
-   }
-   to {
-      translate: 50px;
-   }
-}
-
-@keyframes slideopacity {
-   from {
-      opacity: 0;
-   }
-   to {
-      opacity: 1;
-   }
-}
-
-@keyframes reverseOp {
-   from {
-      opacity: 1;
-   }
-   to {
-      opacity: 0;
-   }
-}
-
 @keyframes gearRotate {
    from {
       rotate: 0deg;
@@ -59,32 +23,69 @@
    animation: ease-in 1ms 400ms both slideopacity;
 }
 
-.settings {
+.gearsContainer {
    display: flex;
-   align-items: center;
    flex-direction: column;
-   gap: 10px;
-   animation: ease-in 1ms 400ms both reverseslidein;
-}
-
-.open {
-   animation: ease-in both slidein;
-}
-
-.gear {
+   align-items: center;
+   justify-content: center;
    cursor: pointer;
-   width: 20px;
-   filter: var(--filter-primary);
 }
 
-.gear:hover {
+.gearsContainer:hover .middle {
+   height: 70px;
+   transition-delay: 200ms;
+   transition-duration: 450ms;
+}
+
+.gearsContainer:hover .gear {
    animation: 3s linear infinite running gearRotate;
    filter: var(--filter-tertiary);
 }
 
-.flag {
+.gearsContainer:hover .settingsIcone {
+   opacity: 1;
+   transition-duration: 600ms;
+   transition-delay: 500ms;
+}
+
+.middle {
+   display: flex;
+   align-items: center;
+   height: 0;
+   overflow: hidden;
+   transition-duration: 500ms;
+}
+
+.settings {
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   gap: 15px;
+}
+
+.settingsIcone {
    cursor: pointer;
    width: 20px;
+   opacity: 0;
+   transition-duration: 300ms;
+}
+
+.gear {
+   width: 20px;
+   filter: var(--filter-primary);
+}
+
+.up,
+.down {
+   height: 10px;
+   overflow: hidden;
+}
+
+.down .gear {
+   translate: 0 -10px;
+}
+
+.flag {
    filter: opacity(0.8);
 }
 
@@ -93,24 +94,10 @@
 }
 
 .moon {
-   cursor: pointer;
-   width: 20px;
    height: 20px;
    filter: var(--filter-primary);
 }
 
 .moon:hover {
    filter: var(--filter-tertiary);
-}
-
-.settingIcone {
-   animation: ease-in 300ms both reverseOp;
-}
-
-.openSetting {
-   animation: ease-in 400ms 1ms both slideopacity;
-}
-
-.toggleSettings {
-   visibility: hidden;
 }
