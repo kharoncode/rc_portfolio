@@ -48,11 +48,21 @@ const Settings = () => {
                      src={langue === 'en' ? gbFlag : frFlag}
                      alt={langue === 'en' ? 'EN' : 'FR'}
                      onClick={() => {
-                        store.dispatch(
-                           settingsSlice.actions.toggleLangue(
-                              langue === 'en' ? 'fr' : 'en'
-                           )
-                        );
+                        document
+                           .querySelectorAll('.langue')
+                           .forEach((el) => el.classList.remove('fade'));
+                        setTimeout(() => {
+                           requestAnimationFrame(() => {
+                              store.dispatch(
+                                 settingsSlice.actions.toggleLangue(
+                                    langue === 'en' ? 'fr' : 'en'
+                                 )
+                              );
+                              document
+                                 .querySelectorAll('.langue')
+                                 .forEach((el) => el.classList.add('fade'));
+                           });
+                        }, 225);
                      }}
                   />
                </div>
