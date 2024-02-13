@@ -7,7 +7,7 @@ const Main = () => {
    const [coordinate, setCoordinate] = useState('');
    const [isMouseHover, setIsMouseHover] = useState(false);
    return (
-      <div className={styles.mainContainer}>
+      <div className={styles.container}>
          <div className={styles.loremContainer}>
             <Lorem coordinate={coordinate} isMouseHover={isMouseHover} />
          </div>
@@ -18,7 +18,9 @@ const Main = () => {
             onMouseEnter={() => setIsMouseHover(true)}
             onMouseLeave={() => setIsMouseHover(false)}
          >
-            <Outlet />
+            <div className={styles.mainContenair}>
+               <Outlet />
+            </div>
          </main>
       </div>
    );
