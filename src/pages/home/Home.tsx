@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import styles from './home.module.css';
 import { getHome, getLangue } from '@/router/selectors';
-import Paragraphe from '@/components/paragraphe/Paragraphe';
+import TextAnimation from '@/components/textAnimation/TextAnimation';
 
 const Home = () => {
    const { title } = useSelector(getHome);
@@ -14,11 +14,11 @@ const Home = () => {
             <span className={styles.name}>{`}`}</span>
          </h1>
          <h2 className={styles.subTitle}>
-            <Paragraphe content={content[0]} />{' '}
+            <TextAnimation content={content[0]} />{' '}
             <span className={styles.name}>Rémi</span>,
-            <Paragraphe content={content[1]} />
+            <TextAnimation content={content[1]} />
             <span className={styles.name}>
-               <Paragraphe content={content[2]} />
+               <TextAnimation content={content[2]} />
             </span>
          </h2>
       </div>

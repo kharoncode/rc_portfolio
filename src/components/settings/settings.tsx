@@ -45,7 +45,7 @@ const Settings = () => {
                   />
                   <img
                      className={`${styles.flag} ${styles.settingsIcone}`}
-                     src={langue === 'en' ? gbFlag : frFlag}
+                     src={langue === 'en' ? frFlag : gbFlag}
                      alt={langue === 'en' ? 'EN' : 'FR'}
                      onClick={() => {
                         document
@@ -62,7 +62,7 @@ const Settings = () => {
                                  .querySelectorAll('.langue')
                                  .forEach((el) => el.classList.add('fade'));
                            });
-                        }, 225);
+                        }, 200);
                      }}
                   />
                </div>
