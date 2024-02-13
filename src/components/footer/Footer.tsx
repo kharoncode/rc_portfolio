@@ -24,7 +24,7 @@ const Footer = () => {
             </a>
             <a
                className={styles.a}
-               href="https://www.linkedin.com/in/r%C3%A9mi-collin-176826227/"
+               href="https://www.linkedin.com/in/collinremi/"
                target="_blank"
             >
                <div className={styles.navIconeContainer}>
