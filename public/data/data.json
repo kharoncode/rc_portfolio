@@ -69,6 +69,19 @@
             "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P14-HRNet",
             "link": ""
+         },
+         "sportsee": {
+            "id": "sportsee",
+            "date": "30/10/2023",
+            "name": "SportSee",
+            "category": "school",
+            "description": {
+               "en": "HRnet is an application that manages employee files.",
+               "fr": "HRnet est une application qui gère les dossiers des employés."
+            },
+            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
+            "github": "https://github.com/kharoncode/OC-P14-HRNet",
+            "link": ""
          }
       }
    },
