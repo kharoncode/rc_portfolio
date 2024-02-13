@@ -12,17 +12,17 @@ export type contentLangue = {
    [key: string]: string[];
 };
 
-export type projects = {
-   [key: string]: {
-      id: string;
-      date: string;
-      name: string;
-      category: string;
-      description: contentLangue;
-      tag: string[];
-      github: string;
-      link: string;
-   };
+export type title = { [key: string]: string };
+
+export type project = {
+   id: string;
+   date: string;
+   name: string;
+   category: string;
+   description: title;
+   tag: string[];
+   github: string;
+   link: string;
 };
 
 type data = {
@@ -31,12 +31,12 @@ type data = {
       title: contentLangue;
    };
    work: {
-      title: contentLangue;
+      title: title;
       tag: { [key: string]: string };
-      projects: projects;
+      projects: { [key: string]: project };
    };
    about: {
-      title: contentLangue;
+      title: title;
       content: contentLangue;
    };
    contact: {

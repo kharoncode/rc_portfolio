@@ -3,6 +3,7 @@ import styles from './contact.module.css';
 import sendIcone from '@/assets/icones/send.svg';
 import { useSelector } from 'react-redux';
 import { getContact, getLangue } from '@/router/selectors';
+import Paragraphe from '@/components/paragraphe/Paragraphe';
 
 const Contact = () => {
    const { content, input } = useSelector(getContact);
@@ -35,14 +36,16 @@ const Contact = () => {
       });
    };
    return (
-      <div className={styles.container}>
+      <div className={`${styles.container} container`}>
          <h1 className={styles.title}>Contact</h1>
          <div className={styles.contentContainer}>
-            <h2>{content[langue][0]}</h2>
+            <h2>
+               <Paragraphe content={content[langue][0]} />
+            </h2>
             <form className={styles.form} onSubmit={handleSubmit}>
                <div className={styles.labelContainer}>
                   <label className={styles.label} htmlFor="contact_name">
-                     {input.name[langue][0]}
+                     <Paragraphe content={input.name[langue][0]} />
                   </label>
                   <input
                      className={`${styles.inputText} ${styles.input}`}

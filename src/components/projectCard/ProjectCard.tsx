@@ -2,23 +2,19 @@ import styles from './projectCard.module.css';
 import eyeIcone from '@/assets/icones/eye.svg';
 import eyeSlashIcone from '@/assets/icones/eye_slash.svg';
 import gitHubIcone from '@/assets/icones/githubProject.svg';
-import { contentLangue } from '@/layouts/dataSlice';
+import { project } from '@/layouts/dataSlice';
+import { getLangue } from '@/router/selectors';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import Paragraphe from '../paragraphe/Paragraphe';
 
 type props = {
-   langue: string;
-   data: {
-      id: string;
-      name: string;
-      description: contentLangue;
-      tag: string[];
-      github: string;
-      link: string;
-   };
+   data: project;
 };
 
-const ProjectCard = ({ data, langue }: props) => {
+const ProjectCard = ({ data }: props) => {
    const { id, name, description, github, link } = data;
+   const langue = useSelector(getLangue);
    return (
       <div className={styles.container}>
          <div className={styles.pictureContainer}>
@@ -55,7 +51,7 @@ const ProjectCard = ({ data, langue }: props) => {
          </div>
          <div className={styles.info}>
             <h3>{name}</h3>
-            <p>{description[langue]}</p>
+            <Paragraphe content={description[langue]} />
          </div>
       </div>
    );

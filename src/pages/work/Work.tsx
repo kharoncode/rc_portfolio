@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux';
 import { getLangue, getWork } from '@/router/selectors';
 import { useState } from 'react';
 import TagFilter from '@/components/tagFilter/TagFilter';
+import Paragraphe from '@/components/paragraphe/Paragraphe';
 
 const Work = () => {
    const { title, projects } = useSelector(getWork);
@@ -11,19 +12,15 @@ const Work = () => {
    const [list, setList] = useState(Object.keys(projects));
 
    return (
-      <div className={styles.container}>
-         <h1 className={styles.title}>{title[langue]}</h1>
+      <div className={`${styles.container} container`}>
+         <h1 className={styles.title}>
+            <Paragraphe content={title[langue]} />
+         </h1>
          <div className={styles.contentContainer}>
             <TagFilter setList={setList} />
             <div className={styles.projectsContainer}>
                {list.map((key) => {
-                  return (
-                     <ProjectCard
-                        key={key}
-                        data={projects[key]}
-                        langue={langue}
-                     />
-                  );
+                  return <ProjectCard key={key} data={projects[key]} />;
                })}
             </div>
          </div>
