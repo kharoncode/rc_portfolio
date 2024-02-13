@@ -17,7 +17,7 @@ const RootLayout = () => {
    }
    useEffect(() => {
       document.querySelector('body')?.setAttribute('data-theme', theme);
-   }, []);
+   }, [theme]);
    return (
       <>
          {loading ? (

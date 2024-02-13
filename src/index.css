@@ -29,6 +29,8 @@
       brightness(101%) contrast(103%);
    --filter-tertiary: invert(29%) sepia(99%) saturate(4621%) hue-rotate(305deg)
       brightness(102%) contrast(102%);
+
+   --opacity-duration: 400ms;
 }
 
 [data-theme='light'] {
@@ -50,6 +52,8 @@
       brightness(102%) contrast(102%);
    --filter-tertiary: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
       brightness(101%) contrast(103%);
+
+   --opacity-duration: 400ms;
 }
 
 #root {
