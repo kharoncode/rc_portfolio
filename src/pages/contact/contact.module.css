@@ -1,55 +1,36 @@
-.container {
-   width: 90%;
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   gap: 50px;
-}
-
-.title {
-   font-size: 7rem;
-   text-transform: uppercase;
-}
-
 .contentContainer {
-   border-top: solid 1px rgba(var(--text-secondary), 0.8);
-   width: 100%;
-   padding: 50px 20px 20px 20px;
-   display: flex;
-   flex-direction: column;
    align-items: center;
    gap: 50px;
 }
 
-.contentContainer h2 {
+.paragraph {
    width: 80%;
+   font-size: x-large;
 }
 
 .form {
+   width: 500px;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 15px;
 }
 
-.inputContainer {
-   display: flex;
-   justify-content: space-between;
-   gap: 10px;
-}
-
 .labelContainer {
+   width: 100%;
    display: flex;
    flex-direction: column;
+   align-items: center;
    gap: 5px;
 }
 
 .label {
-   font-size: 1.1rem;
+   font-size: large;
+   align-self: self-start;
 }
 
 .input {
-   width: 500px;
+   width: 100%;
    background: rgba(var(--input));
    border: none;
    outline: none;
@@ -88,4 +69,36 @@
 .submitButton:hover img {
    filter: initial;
    transition-duration: 400ms;
+}
+
+@media screen and (max-width: 1400px) {
+   .paragraph {
+      font-size: large;
+      width: 90%;
+   }
+}
+
+@media screen and (max-width: 950px) {
+   .paragraph {
+      width: 100%;
+      font-size: medium;
+   }
+   .label {
+      font-size: medium;
+   }
+   .contentContainer {
+      gap: 30px;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   .form {
+      width: 90%;
+   }
+}
+
+@media screen and (max-width: 500px) {
+   .form {
+      width: 100%;
+   }
 }

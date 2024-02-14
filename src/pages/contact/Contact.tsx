@@ -35,10 +35,12 @@ const Contact = () => {
       });
    };
    return (
-      <div className={`${styles.container} container`}>
-         <h1 className={`${styles.title} langue fade`}>Contact</h1>
-         <div className={styles.contentContainer}>
-            <h2 className="langue fade">{content[langue][0]}</h2>
+      <div className={`container`}>
+         <h1 className={`page-title langue fade`}>Contact</h1>
+         <div className={`${styles.contentContainer} content-container`}>
+            <p className={`${styles.paragraph} langue fade`}>
+               {content[langue][0]}
+            </p>
             <form className={styles.form} onSubmit={handleSubmit}>
                <div className={styles.labelContainer}>
                   <label

@@ -51,4 +51,8 @@
    .iconesContainer {
       flex-direction: initial;
    }
+
+   .icone {
+      width: 20px;
+   }
 }

@@ -7,9 +7,9 @@ const About = () => {
    const { content, title } = useSelector(getAbout);
    const langue = useSelector(getLangue);
    return (
-      <div className={`${styles.container} container`}>
-         <h1 className={`${styles.title} langue fade`}>{title[langue]}</h1>
-         <div className={styles.contentContainer}>
+      <div className={`container`}>
+         <h1 className={`page-title langue fade`}>{title[langue]}</h1>
+         <div className={`${styles.contentContainer} content-container`}>
             <img
                src={portrait}
                alt="Portait de Rémi"

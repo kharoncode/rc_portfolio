@@ -11,9 +11,9 @@ const Work = () => {
    const [list, setList] = useState(Object.keys(projects));
 
    return (
-      <div className={`${styles.container} container`}>
-         <h1 className={`${styles.title} langue fade`}>{title[langue]}</h1>
-         <div className={styles.contentContainer}>
+      <div className={`container`}>
+         <h1 className={`page-title langue fade`}>{title[langue]}</h1>
+         <div className={`${styles.contentContainer} content-container`}>
             <TagFilter setList={setList} />
             <div className={styles.projectsContainer}>
                {list.map((key) => {

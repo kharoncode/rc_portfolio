@@ -36,4 +36,7 @@
    .loremContainer {
       padding: 0;
    }
+   .mainContenair {
+      height: 90svh;
+   }
 }

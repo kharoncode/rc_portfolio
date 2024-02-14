@@ -126,7 +126,8 @@
 
    .gearsContainer:hover .middle {
       height: initial;
-      width: 60px;
+      padding: 0 10px;
+      width: 80px;
    }
 
    .up,

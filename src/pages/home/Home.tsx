@@ -7,7 +7,7 @@ const Home = () => {
    const langue = useSelector(getLangue);
    const content = title[langue];
    return (
-      <div className={`${styles.container} container`}>
+      <div className={`container`}>
          <h1 className={`${styles.title} langue fade`}>
             <span className={styles.name}>{`{`}</span> Hello World{' '}
             <span className={styles.name}>{`}`}</span>
@@ -16,7 +16,7 @@ const Home = () => {
             {content[0]} <br /> <span className={styles.name}>Rémi</span>,<br />
             {content[1]}
             <br />
-            <span className={styles.name}>{content[2]}</span> :)
+            <span className={styles.name}>{content[2]}</span> {`:)`}
          </h2>
       </div>
    );

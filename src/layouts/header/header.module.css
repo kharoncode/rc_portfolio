@@ -26,7 +26,7 @@
    font-weight: 500;
 }
 
-.link .navIcone {
+.navIcone {
    width: 30px;
    filter: var(--filter-primary);
 }
@@ -81,15 +81,6 @@
    gap: 10px;
 }
 
-.icone {
-   width: 20px;
-   filter: var(--filter-primary);
-}
-
-.icone:hover {
-   filter: var(--filter-tertiary);
-}
-
 @media screen and (max-width: 750px) {
    .container,
    .nav {
@@ -99,5 +90,9 @@
 
    .link {
       width: initial;
+   }
+
+   .navIcone {
+      width: 20px;
    }
 }
