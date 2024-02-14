@@ -6,7 +6,6 @@ import { project } from '@/layouts/dataSlice';
 import { getLangue } from '@/router/selectors';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import TextAnimation from '../textAnimation/TextAnimation';
 
 type props = {
    data: project;
@@ -49,9 +48,9 @@ const ProjectCard = ({ data }: props) => {
                )}
             </div>
          </div>
-         <div className={styles.info}>
+         <div className={`${styles.info} langue fade`}>
             <h3>{name}</h3>
-            <TextAnimation content={description[langue]} />
+            {description[langue]}
          </div>
       </div>
    );
