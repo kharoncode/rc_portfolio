@@ -28,4 +28,6 @@
    justify-content: center;
    opacity: 0;
    animation: opacity 1000ms 1000ms ease-in-out both;
+   overflow-y: scroll;
+   scrollbar-width: none;
 }
