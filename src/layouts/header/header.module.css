@@ -96,4 +96,8 @@
       width: 100%;
       flex-direction: initial;
    }
+
+   .link {
+      width: initial;
+   }
 }
