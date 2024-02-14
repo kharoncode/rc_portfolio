@@ -1,7 +1,7 @@
 import { createHashRouter, RouterProvider } from 'react-router-dom';
 import Home from '@/pages/home/Home';
 import Error from '@/pages/error/error';
-import RootLayout from '@/layouts/RootLayout';
+import RootLayout from '@/layouts/rootLayout/RootLayout';
 import Work from '@/pages/work/Work';
 import About from '@/pages/about/About';
 import Contact from '@/pages/contact/Contact';

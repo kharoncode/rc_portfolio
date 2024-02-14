@@ -1,12 +1,12 @@
-import Footer from '@/components/footer/Footer';
-import Header from '@/components/header/Header';
 import styles from './rootLayout.module.css';
-import Main from '@/components/main/Main';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getData, getTheme } from '@/router/selectors';
 import { AppDispatch } from '@/router/store';
-import { fetchData } from './dataSlice';
+import { fetchData } from '../dataSlice';
+import Header from '../header/Header';
+import Footer from '../footer/Footer';
+import Main from '../main/Main';
 
 const RootLayout = () => {
    const dispatch = useDispatch<AppDispatch>();

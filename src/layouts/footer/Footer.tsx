@@ -2,7 +2,7 @@ import styles from './footer.module.css';
 import githubIcone from '@/assets/icones/github.svg';
 import linkedinIcone from '@/assets/icones/linkedin.svg';
 import mail from '@/assets/icones/mail.svg';
-import Settings from '../settings/settings';
+import Settings from '@/components/settings/settings';
 
 const Footer = () => {
    return (

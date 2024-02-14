@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
-import Lorem from '../lorem/Lorem';
 import styles from './main.module.css';
 import { useState } from 'react';
+import Lorem from '@/components/lorem/Lorem';
 
 const Main = () => {
    const [coordinate, setCoordinate] = useState('');
