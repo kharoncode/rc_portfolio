@@ -120,7 +120,12 @@
       width: 0;
    }
 
+   .gearsContainer {
+      margin-left: 10px;
+   }
+
    .gearsContainer:hover .middle {
+      height: initial;
       width: 60px;
    }
 
