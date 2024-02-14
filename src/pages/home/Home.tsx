@@ -11,7 +11,6 @@ const Home = () => {
    const content = title[langue];
    const [temp, setTemp] = useState(':)');
    const [time, setTime] = useState(5000);
-   console.log('ini');
    setTimeout(() => {
       setTemp(randomSmiley[Math.floor(Math.random() * 6)]);
       setTime(Math.ceil(Math.random() * 2000 + 8000));
