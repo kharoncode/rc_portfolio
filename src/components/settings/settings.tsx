@@ -14,7 +14,7 @@ const Settings = () => {
    const langue = useSelector(getLangue);
 
    return (
-      <div className={styles.contenair}>
+      <div className={styles.container}>
          <div className={styles.gearsContainer}>
             <div className={styles.up}>
                <img

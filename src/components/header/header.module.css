@@ -89,3 +89,11 @@
 .icone:hover {
    filter: var(--filter-tertiary);
 }
+
+@media screen and (max-width: 750px) {
+   .container,
+   .nav {
+      width: 100%;
+      flex-direction: initial;
+   }
+}

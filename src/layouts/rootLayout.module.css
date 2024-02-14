@@ -15,3 +15,9 @@
    opacity: 0;
    animation: opacity 1000ms ease-in-out both;
 }
+
+@media screen and (max-width: 750px) {
+   .container {
+      flex-direction: column;
+   }
+}

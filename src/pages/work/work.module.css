@@ -27,3 +27,9 @@
    flex-wrap: wrap;
    gap: 30px 30px;
 }
+
+@media screen and (max-width: 925px) {
+   .projectsContainer {
+      justify-content: center;
+   }
+}

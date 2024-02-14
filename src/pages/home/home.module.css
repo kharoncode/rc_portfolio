@@ -23,3 +23,21 @@
    text-transform: uppercase;
    font-size: x-large;
 }
+
+@media screen and (max-width: 1110px) {
+   .title {
+      font-size: 4rem;
+   }
+}
+
+@media screen and (max-width: 915px) {
+   .title {
+      font-size: 3rem;
+   }
+}
+
+@media screen and (max-width: 750px) {
+   .title {
+      font-size: 2rem;
+   }
+}

@@ -7,7 +7,7 @@
    }
 }
 
-.contenair {
+.container {
    overflow: hidden;
    display: flex;
    align-items: center;
@@ -15,7 +15,7 @@
    gap: 15px;
 }
 
-.settingsContenair {
+.settingscontainer {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -32,7 +32,7 @@
 }
 
 .gearsContainer:hover .middle {
-   height: 70px;
+   width: 70px;
    transition-delay: 200ms;
    transition-duration: 450ms;
 }
@@ -100,4 +100,37 @@
 
 .moon:hover {
    filter: var(--filter-tertiary);
+}
+
+@media screen and (max-width: 750px) {
+   .container {
+      width: 100%;
+      flex-direction: initial;
+   }
+
+   .settingscontainer,
+   .gearsContainer,
+   .middle,
+   .settings {
+      flex-direction: initial;
+   }
+
+   .middle {
+      height: initial;
+      width: 0;
+   }
+
+   .gearsContainer:hover .middle {
+      width: 60px;
+   }
+
+   .up,
+   .down {
+      width: 10px;
+      height: 20px;
+   }
+
+   .down .gear {
+      translate: -10px 0;
+   }
 }
