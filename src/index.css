@@ -101,7 +101,8 @@ a:active {
    color: inherit;
 }
 
-.langue {
+.langue,
+.smiley {
    opacity: 0;
    transition: opacity 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
