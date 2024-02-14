@@ -32,8 +32,9 @@ const Lorem = (props: { coordinate: string; isMouseHover: boolean }) => {
             `.${styles.container}`
          );
          if (container) {
-            container.style.background = `radial-gradient(
-               at ${isMouseHover ? coordinate : '-50px -50px'},
+            container.style.background = `radial-gradient(circle 1500px at ${
+               isMouseHover ? coordinate : '-50px -50px'
+            },
                rgba(var(--text-tertiary), 0.7) 1%,
                rgba(var(--text-primary), 0.08) 5%,
                rgba(var(--text-primary), 0.08) 100%
