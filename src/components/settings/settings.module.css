@@ -32,7 +32,7 @@
 }
 
 .gearsContainer:hover .middle {
-   width: 70px;
+   height: 70px;
    transition-delay: 200ms;
    transition-duration: 450ms;
 }
