@@ -1,14 +1,22 @@
-import { useState } from 'react';
+import { useSelector } from 'react-redux';
+import styles from './smiley.module.css';
+import { useEffect, useState } from 'react';
+import { getSmileyList } from '@/router/selectors';
 
 const Smiley = () => {
-   const randomSmiley = [':)', 'X)', ';)', ':D', ':p', '=)', '=D'];
-   const [smiley, setSmiley] = useState(':)');
-   const [time, setTime] = useState(5000);
-   setTimeout(() => {
-      setSmiley(randomSmiley[Math.floor(Math.random() * 6)]);
-      setTime(Math.ceil(Math.random() * 2000 + 8000));
-   }, time);
-   return <span>{smiley}</span>;
+   const smileyList = useSelector(getSmileyList);
+   const [smiley, setSmiley] = useState(
+      smileyList[Math.floor(Math.random() * smileyList.length)]
+   );
+   useEffect(() => {
+      const smileyTimeOut = setInterval(() => {
+         setSmiley(smileyList[Math.floor(Math.random() * smileyList.length)]);
+      }, 5000);
+      return () => {
+         clearInterval(smileyTimeOut);
+      };
+   }, [smileyList]);
+   return <span className={styles.smiley}>{smiley}</span>;
 };
 
 export default Smiley;

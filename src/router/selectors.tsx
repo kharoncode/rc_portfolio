@@ -5,6 +5,10 @@ export const getData = (state: RootState) => {
    return state?.data;
 };
 
+export const getSmileyList = (state: RootState) => {
+   return getData(state).data.smileyList;
+};
+
 export const getHome = (state: RootState) => {
    return getData(state).data.home;
 };

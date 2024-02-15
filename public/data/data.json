@@ -1,5 +1,6 @@
 {
    "init": false,
+   "smileyList": [":)", "X)", ";)", ";)", ":p", "=)", "=D"],
    "home": {
       "title": {
          "en": ["my name is", "and i'm a", "Front-End Developer"],
