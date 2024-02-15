@@ -12,6 +12,10 @@ export type contentLangue = {
    [key: string]: string[];
 };
 
+export type contentQuote = {
+   [key: string]: { author: string; quote: string }[];
+};
+
 export type title = { [key: string]: string };
 
 export type project = {
@@ -43,7 +47,7 @@ type data = {
       content: contentLangue;
       input: { [key: string]: contentLangue };
       modal: title;
-      waiting_room: { [key: string]: contentLangue };
+      waiting_room: { title: contentLangue; content: contentQuote };
    };
 };
 
@@ -60,7 +64,12 @@ const initialState: dataState = {
       home: { title: {} },
       work: { title: {}, tag: {}, projects: {} },
       about: { title: {}, content: {} },
-      contact: { content: {}, input: {}, modal: {}, waiting_room: {} },
+      contact: {
+         content: {},
+         input: {},
+         modal: {},
+         waiting_room: { title: {}, content: {} },
+      },
    },
    error: undefined,
 };

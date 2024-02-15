@@ -1,6 +1,7 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import styles from './contact.module.css';
 import sendIcone from '@/assets/icones/send.svg';
+import backIcone from '@/assets/icones/reset.svg';
 import { useSelector } from 'react-redux';
 import { getContact, getLangue, getTimer } from '@/router/selectors';
 import { Modal } from '@/components/modal/Modal';
@@ -13,12 +14,16 @@ const resetValue = (element: HTMLInputElement) => {
 
 const Contact = () => {
    const { content, input, modal, waiting_room } = useSelector(getContact);
+   const langue = useSelector(getLangue);
    const timer = useSelector(getTimer);
-   const [randomNbr] = useState(Math.floor(Math.random() * 3));
+   const [randomNbr] = useState(
+      Math.floor(
+         Math.random() * Object.keys(waiting_room.content[langue]).length
+      )
+   );
    const [open, setOpen] = useState(false);
    const [isOver, setIsOver] = useState(true);
    const [seconds, setSeconds] = useState(0);
-   const langue = useSelector(getLangue);
    const data = {
       service_id: import.meta.env.VITE_SERVICE_ID,
       template_id: import.meta.env.VITE_TEMPLATE_ID,
@@ -61,16 +66,15 @@ const Contact = () => {
          to_name: 'Rémi',
       };
       data['template_params'] = result;
-      /* fetch('https://api.emailjs.com/api/v1.0/email/send', {
+      fetch('https://api.emailjs.com/api/v1.0/email/send', {
          method: 'POST',
          body: JSON.stringify(data),
          headers: {
             'Content-Type': 'application/json',
          },
-      }); */
+      });
       store.dispatch(settingsSlice.actions.setTimer(Date.now() + 60000));
       setIsOver(false);
-      console.log(data);
       setOpen(true);
       resetValue(name_elt);
       resetValue(mail_elt);
@@ -131,26 +135,39 @@ const Contact = () => {
                            required
                         />
                      </div>
-                     <button className={styles.submitButton} type="submit">
+                     <button
+                        className={`${styles.button} ${styles.submitButton}`}
+                        type="submit"
+                     >
                         <img src={sendIcone} alt="Send" />
                      </button>
                   </form>
                </>
             ) : (
-               <div>
-                  <p>
+               <div className={`${styles.waitingRoomContainer} langue fade`}>
+                  <p className={styles.paragraph}>
                      {waiting_room.title[langue][0]}
-                     {`${timer > 0 ? seconds : 0}s`}
+                     <span className={styles.timer}>{`${
+                        timer > 0 ? seconds : 0
+                     }s`}</span>
                      {waiting_room.title[langue][1]}
                   </p>
-                  <p>{waiting_room.content[langue][randomNbr]}</p>
+                  <div className={`${styles.quoteContainer}`}>
+                     <p className={`${styles.paragraph} ${styles.quote}`}>
+                        "{waiting_room.content[langue][randomNbr].quote}"
+                     </p>
+                     <p className={`${styles.paragraph} ${styles.author}`}>
+                        {waiting_room.content[langue][randomNbr].author}
+                     </p>
+                  </div>
                   {timer === 0 ? (
                      <button
+                        className={`${styles.button}`}
                         onClick={() => {
                            setIsOver(true);
                         }}
                      >
-                        Retour
+                        <img src={backIcone} alt="Back" />
                      </button>
                   ) : (
                      <></>
