@@ -173,6 +173,26 @@
             "en": ["Name"],
             "fr": ["Nom"]
          }
+      },
+      "modal": {
+         "en": "Your message has been sent. Thank you very much!",
+         "fr": "Votre message m'a bien été envoyé. Merci !"
+      },
+      "waiting_room": {
+         "title": {
+            "en": [
+               "Would you like to send me another message? Take ",
+               " to share something together"
+            ],
+            "fr": [
+               "Vous souhaitez me renvoyer un autre message ? Prenoms ",
+               " pour partagez quelque chose en ensemble :"
+            ]
+         },
+         "content": {
+            "en": ["Do you know, we can ...", "two", "three"],
+            "fr": ["Le saviez vous, on peut ...", "deux", "trois"]
+         }
       }
    }
 }

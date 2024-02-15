@@ -29,3 +29,6 @@ export const getTheme = (state: RootState) => {
 export const getLangue = (state: RootState) => {
    return state?.settings.langue;
 };
+export const getTimer = (state: RootState) => {
+   return state?.settings.timer;
+};
