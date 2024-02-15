@@ -20,18 +20,20 @@
 }
 
 :root {
-   --text-primary: 235, 235, 235;
+   --text-primary: 225, 225, 225;
    --text-secondary: 29, 240, 255;
    --text-tertiary: 255, 29, 180;
 
-   --img-darken: 32, 32, 32;
+   --color-primary-invert: 32, 32, 32;
 
-   --input: 235, 235, 235;
+   --input: 225, 225, 225;
 
-   --bg-primary: 32, 32, 32;
+   --bg-primary: var(--color-primary-invert);
 
-   --filter-primary: invert(100%) sepia(0%) saturate(7500%) hue-rotate(315deg)
-      brightness(103%) contrast(102%);
+   --filter-primary: invert(100%) sepia(1%) saturate(527%) hue-rotate(248deg)
+      brightness(111%) contrast(76%);
+   --filter-primary-invert: invert(10%) sepia(3%) saturate(0%) hue-rotate(17deg)
+      brightness(95%) contrast(91%);
    --filter-primary-darken: invert(100%) sepia(0%) saturate(7500%)
       hue-rotate(315deg) brightness(50%) contrast(102%);
    --filter-secondary: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
@@ -44,23 +46,25 @@
 
 [data-theme='light'] {
    --text-primary: 32, 32, 32;
-   --text-secondary: 255, 29, 180;
-   --text-tertiary: 29, 240, 255;
+   --text-secondary: 226, 27, 160;
+   --text-tertiary: 27, 213, 226;
 
-   --img-darken: 235, 235, 235;
+   --color-primary-invert: 215, 215, 215;
 
    --input: 235, 235, 235;
 
-   --bg-primary: 215, 215, 215;
+   --bg-primary: var(--color-primary-invert);
 
    --filter-primary: invert(10%) sepia(3%) saturate(0%) hue-rotate(17deg)
       brightness(95%) contrast(91%);
+   --filter-primary-invert: invert(100%) sepia(1%) saturate(527%)
+      hue-rotate(248deg) brightness(111%) contrast(76%);
    --filter-primary-darken: invert(100%) sepia(0%) saturate(7500%)
       hue-rotate(315deg) brightness(50%) contrast(102%);
    --filter-secondary: invert(29%) sepia(99%) saturate(4621%) hue-rotate(305deg)
       brightness(102%) contrast(102%);
-   --filter-tertiary: invert(81%) sepia(39%) saturate(2649%) hue-rotate(143deg)
-      brightness(101%) contrast(103%);
+   --filter-tertiary: invert(82%) sepia(62%) saturate(2264%) hue-rotate(137deg)
+      brightness(92%) contrast(93%);
 
    --opacity-duration: 400ms;
 }
@@ -70,6 +74,7 @@
 }
 
 body {
+   color: #e1e1e1;
    color: #202020;
    color: rgba(var(--text-primary));
    background-color: rgb(var(--bg-primary));

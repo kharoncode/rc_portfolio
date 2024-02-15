@@ -67,7 +67,7 @@
 }
 
 .button:hover img {
-   filter: initial;
+   filter: var(--filter-primary-invert);
    transition-duration: 400ms;
 }
 
