@@ -95,4 +95,7 @@
    .navIcone {
       width: 20px;
    }
+   .isActive {
+      border-radius: 0 0 5px 5px;
+   }
 }
