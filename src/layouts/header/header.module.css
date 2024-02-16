@@ -98,4 +98,10 @@
    .isActive {
       border-radius: 0 0 5px 5px;
    }
+
+   .link:nth-child(odd):hover .navIconeContainer,
+   .link:nth-child(even):hover .navIconeContainer {
+      rotate: 0deg;
+      transition-duration: 0ms;
+   }
 }

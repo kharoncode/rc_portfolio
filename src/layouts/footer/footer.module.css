@@ -47,7 +47,7 @@
       align-items: center;
       width: 100%;
       flex-direction: initial;
-      height: 30px;
+      height: 35px;
    }
 
    .iconesContainer {
@@ -56,5 +56,11 @@
 
    .icone {
       width: 20px;
+   }
+
+   .a:nth-child(odd):hover .navIconeContainer,
+   .a:nth-child(even):hover .navIconeContainer {
+      rotate: 0deg;
+      transition-duration: 0ms;
    }
 }
