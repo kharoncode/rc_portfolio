@@ -2,7 +2,10 @@
    font-size: 5svw;
 }
 
-.subTitle {
+.content {
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
    font-size: 4svw;
    margin-bottom: 50px;
 }
@@ -11,11 +14,27 @@
    color: rgba(var(--text-secondary));
 }
 
+.status {
+   display: flex;
+   gap: 20px;
+}
+
 @media screen and (max-width: 750px) {
    .title {
-      font-size: 6svw;
+      font-size: 8svw;
    }
-   .subTitle {
-      font-size: 5svw;
+   .content {
+      align-items: center;
+      gap: 20px;
+      font-size: 7svw;
+      margin-bottom: 100px;
+   }
+   .status {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+   }
+   .skillsContainer {
+      transform: rotate(30deg);
    }
 }

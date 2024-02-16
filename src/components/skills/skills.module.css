@@ -51,9 +51,3 @@
 .iconebw {
    filter: var(--filter-primary) !important;
 }
-
-@media screen and (max-width: 750px) {
-   .container {
-      transform: rotate(30deg);
-   }
-}
