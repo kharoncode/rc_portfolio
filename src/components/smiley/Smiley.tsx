@@ -11,7 +11,7 @@ const Smiley = () => {
    useEffect(() => {
       const smileyTimeOut = setInterval(() => {
          setSmiley(smileyList[Math.floor(Math.random() * smileyList.length)]);
-      }, 5000);
+      }, 3000);
       return () => {
          clearInterval(smileyTimeOut);
       };

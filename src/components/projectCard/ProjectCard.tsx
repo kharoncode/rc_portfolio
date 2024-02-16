@@ -21,28 +21,28 @@ const ProjectCard = ({ data }: props) => {
                loading="lazy"
                className={styles.picture}
                src={`./pictures/projects/${id}.png`}
-               alt="BF"
+               alt={`${name} Picture`}
             />
             <div className={styles.hoverCard}>
                <Link to={github} target="_blank">
                   <img
                      className={`${styles.icone} ${styles.iconeLink}`}
                      src={gitHubIcone}
-                     alt="GitHub"
+                     alt="GitHub Link"
                   />
                </Link>
                {link === '' ? (
                   <img
                      className={`${styles.icone} ${styles.eyeSlash}`}
                      src={eyeSlashIcone}
-                     alt=""
+                     alt="No Web Link"
                   />
                ) : (
                   <Link to={link} target="_blank">
                      <img
                         className={`${styles.icone} ${styles.iconeLink}`}
                         src={eyeIcone}
-                        alt="Visite"
+                        alt="Web Link"
                      />
                   </Link>
                )}

@@ -1,52 +1,29 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useState, type FormEvent } from 'react';
 import styles from './contact.module.css';
 import sendIcone from '@/assets/icones/send.svg';
-import backIcone from '@/assets/icones/reset.svg';
 import { useSelector } from 'react-redux';
 import { getContact, getLangue, getTimer } from '@/router/selectors';
 import { Modal } from '@/components/modal/Modal';
 import { store } from '@/router/store';
 import { settingsSlice } from '@/layouts/settingsSlice';
+import WaitingRoom from '@/components/waitingRoom/WaitingRoom';
 
 const resetValue = (element: HTMLInputElement) => {
    element.value = '';
 };
 
 const Contact = () => {
-   const { content, input, modal, waiting_room } = useSelector(getContact);
+   const { content, input, modal } = useSelector(getContact);
    const langue = useSelector(getLangue);
    const timer = useSelector(getTimer);
-   const [randomNbr] = useState(
-      Math.floor(
-         Math.random() * Object.keys(waiting_room.content[langue]).length
-      )
-   );
    const [open, setOpen] = useState(false);
    const [isOver, setIsOver] = useState(true);
-   const [seconds, setSeconds] = useState(0);
    const data = {
       service_id: import.meta.env.VITE_SERVICE_ID,
       template_id: import.meta.env.VITE_TEMPLATE_ID,
       user_id: import.meta.env.VITE_PUBLIC_KEY,
       template_params: {},
    };
-
-   useEffect(() => {
-      const getTime = (date: number) => {
-         const time = date - Date.now();
-         if (time < 0) {
-            store.dispatch(settingsSlice.actions.setTimer(0));
-         }
-         setSeconds(Math.floor((time / 1000) % 60));
-      };
-      if (timer !== 0) {
-         getTime(timer);
-         const interval = setInterval(() => getTime(timer), 1000);
-         return () => {
-            clearInterval(interval);
-         };
-      }
-   }, [timer]);
 
    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
       e.preventDefault();
@@ -144,35 +121,7 @@ const Contact = () => {
                   </form>
                </>
             ) : (
-               <div className={`${styles.waitingRoomContainer} langue fade`}>
-                  <p className={styles.paragraph}>
-                     {waiting_room.title[langue][0]}
-                     <span className={styles.timer}>{`${
-                        timer > 0 ? seconds : 0
-                     }s`}</span>
-                     {waiting_room.title[langue][1]}
-                  </p>
-                  <div className={`${styles.quoteContainer}`}>
-                     <p className={`${styles.paragraph} ${styles.quote}`}>
-                        "{waiting_room.content[langue][randomNbr].quote}"
-                     </p>
-                     <p className={`${styles.paragraph} ${styles.author}`}>
-                        {waiting_room.content[langue][randomNbr].author}
-                     </p>
-                  </div>
-                  {timer === 0 ? (
-                     <button
-                        className={`${styles.button}`}
-                        onClick={() => {
-                           setIsOver(true);
-                        }}
-                     >
-                        <img src={backIcone} alt="Back" />
-                     </button>
-                  ) : (
-                     <></>
-                  )}
-               </div>
+               <WaitingRoom setIsOver={setIsOver} />
             )}
             <Modal open={open} setOpen={setOpen}>
                <p className="langue fade">{modal[langue]}</p>
