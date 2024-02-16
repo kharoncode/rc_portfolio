@@ -10,7 +10,6 @@ const Smiley = () => {
          smileyList.mouth[Math.floor(Math.random() * smileyList.mouth.length)]
       }`
    );
-   const [eye, setEye] = useState();
    useEffect(() => {
       const smileyTimeOut = setInterval(() => {
          setSmiley(
