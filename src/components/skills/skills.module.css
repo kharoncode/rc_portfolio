@@ -7,6 +7,20 @@
    }
 }
 
+@keyframes greyScale {
+   0%,
+   10% {
+      filter: grayscale(100%);
+   }
+   50% {
+      filter: grayscale(0%);
+   }
+   90%,
+   100% {
+      filter: grayscale(100%);
+   }
+}
+
 .container {
    display: flex;
    height: 100px;
@@ -26,27 +40,20 @@
    display: flex;
    gap: 20px;
    width: 100%;
-   animation: slide 8000ms linear infinite;
+   animation: slide linear infinite;
 }
 
 .icone {
    border-radius: 10px;
-   width: 80px;
-   transition-duration: 200ms;
-}
-
-.icone:hover {
-   transition-duration: 200ms;
-}
-
-.iconecolor {
-   filter: grayscale(100%);
-}
-
-.iconecolor:hover {
-   filter: initial;
+   animation: greyScale linear infinite;
 }
 
 .iconebw {
-   filter: var(--filter-primary);
+   filter: var(--filter-primary) !important;
+}
+
+@media screen and (max-width: 750px) {
+   .container {
+      transform: rotate(30deg);
+   }
 }

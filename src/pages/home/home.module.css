@@ -4,15 +4,11 @@
 
 .subTitle {
    font-size: 4svw;
+   margin-bottom: 50px;
 }
 
 .name {
    color: rgba(var(--text-secondary));
-}
-
-.test {
-   text-transform: uppercase;
-   font-size: x-large;
 }
 
 @media screen and (max-width: 750px) {
