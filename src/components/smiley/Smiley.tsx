@@ -6,12 +6,24 @@ import { getSmileyList } from '@/router/selectors';
 const Smiley = () => {
    const smileyList = useSelector(getSmileyList);
    const [smiley, setSmiley] = useState(
-      smileyList[Math.floor(Math.random() * smileyList.length)]
+      `${smileyList.eyes[Math.floor(Math.random() * smileyList.eyes.length)]}${
+         smileyList.mouth[Math.floor(Math.random() * smileyList.mouth.length)]
+      }`
    );
    const [eye, setEye] = useState();
    useEffect(() => {
       const smileyTimeOut = setInterval(() => {
-         setSmiley(smileyList[Math.floor(Math.random() * smileyList.length)]);
+         setSmiley(
+            `${
+               smileyList.eyes[
+                  Math.floor(Math.random() * smileyList.eyes.length)
+               ]
+            }${
+               smileyList.mouth[
+                  Math.floor(Math.random() * smileyList.mouth.length)
+               ]
+            }`
+         );
       }, 3000);
       return () => {
          clearInterval(smileyTimeOut);
