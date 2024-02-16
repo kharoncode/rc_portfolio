@@ -1,6 +1,12 @@
 {
    "init": false,
    "smileyList": [":)", "X)", ";)", ";)", ":p", "=)", "=D"],
+   "error": {
+      "title": {
+         "en": ["Page not found", "Error 404"],
+         "fr": ["Page introuvable", "Erreurs 404"]
+      }
+   },
    "home": {
       "title": {
          "en": ["my name is", "and i'm a", "Front-End Developer"],

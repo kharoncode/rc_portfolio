@@ -9,6 +9,10 @@ export const getSmileyList = (state: RootState) => {
    return getData(state).data.smileyList;
 };
 
+export const getError = (state: RootState) => {
+   return getData(state).data.error;
+};
+
 export const getHome = (state: RootState) => {
    return getData(state).data.home;
 };

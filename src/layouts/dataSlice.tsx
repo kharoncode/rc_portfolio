@@ -32,6 +32,9 @@ export type project = {
 type data = {
    init: boolean;
    smileyList: string[];
+   error: {
+      title: contentLangue;
+   };
    home: {
       title: contentLangue;
    };
@@ -63,6 +66,7 @@ const initialState: dataState = {
    data: {
       init: true,
       smileyList: [],
+      error: { title: {} },
       home: { title: {} },
       work: { title: {}, tag: {}, projects: {} },
       about: { title: {}, content: {} },
