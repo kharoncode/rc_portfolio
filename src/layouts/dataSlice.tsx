@@ -37,6 +37,7 @@ type data = {
    };
    home: {
       title: contentLangue;
+      skills: { name: string; type: string }[];
    };
    work: {
       title: title;
@@ -67,7 +68,7 @@ const initialState: dataState = {
       init: true,
       smileyList: [],
       error: { title: {} },
-      home: { title: {} },
+      home: { title: {}, skills: [] },
       work: { title: {}, tag: {}, projects: {} },
       about: { title: {}, content: {} },
       contact: {

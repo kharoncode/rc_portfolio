@@ -11,7 +11,17 @@
       "title": {
          "en": ["my name is", "and i'm a", "Front-End Developer"],
          "fr": ["je m'appelle", "et je suis", "Développeur Front-End"]
-      }
+      },
+      "skills": [
+         { "name": "js", "type": "color" },
+         { "name": "ts", "type": "color" },
+         { "name": "tailwind", "type": "color" },
+         { "name": "react", "type": "color" },
+         { "name": "redux", "type": "color" },
+         { "name": "npm", "type": "color" },
+         { "name": "vitejs", "type": "color" },
+         { "name": "nextjs", "type": "bw" }
+      ]
    },
    "work": {
       "title": {

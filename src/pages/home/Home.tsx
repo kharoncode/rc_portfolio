@@ -2,6 +2,7 @@ import { useSelector } from 'react-redux';
 import styles from './home.module.css';
 import { getHome, getLangue } from '@/router/selectors';
 import Smiley from '@/components/smiley/Smiley';
+import Skills from '@/components/skills/Skills';
 
 const Home = () => {
    const { title } = useSelector(getHome);
@@ -19,6 +20,7 @@ const Home = () => {
             <br />
             <span className={styles.name}>{content[2]}</span> <Smiley />
          </h2>
+         <Skills />
       </div>
    );
 };

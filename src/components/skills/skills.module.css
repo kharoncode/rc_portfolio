@@ -1,0 +1,52 @@
+@keyframes slide {
+   from {
+      transform: translateX(0);
+   }
+   to {
+      transform: translateX(-100%);
+   }
+}
+
+.container {
+   display: flex;
+   height: 100px;
+   overflow: hidden;
+   border-radius: 25px;
+   mask-image: linear-gradient(
+      to right,
+      hsl(0 0% 0% / 0),
+      hsl(0 0% 0% / 1) 30%,
+      hsl(0 0% 0% / 1) 70%,
+      hsl(0 0% 0% / 0)
+   );
+}
+
+.logosContainer {
+   padding: 0 10px;
+   display: flex;
+   gap: 20px;
+   width: 100%;
+   animation: slide 8000ms linear infinite;
+}
+
+.icone {
+   border-radius: 10px;
+   width: 80px;
+   transition-duration: 200ms;
+}
+
+.icone:hover {
+   transition-duration: 200ms;
+}
+
+.iconecolor {
+   filter: grayscale(100%);
+}
+
+.iconecolor:hover {
+   filter: initial;
+}
+
+.iconebw {
+   filter: var(--filter-primary);
+}
