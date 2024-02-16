@@ -1,6 +1,9 @@
 {
    "init": false,
-   "smileyList": [":)", "X)", ";)", ";)", ":p", "=)", "=D"],
+   "smileyList": {
+      "eyes": [":", "X", ";", "="],
+      "mouth": [")", "]", "D", "3", "p", "b", "þ"]
+   },
    "error": {
       "title": {
          "en": ["Page not found", "Error 404"],

@@ -31,7 +31,7 @@ export type project = {
 
 type data = {
    init: boolean;
-   smileyList: string[];
+   smileyList: { eyes: string[]; mouth: string[] };
    error: {
       title: contentLangue;
    };
@@ -66,7 +66,7 @@ const initialState: dataState = {
    loading: false,
    data: {
       init: true,
-      smileyList: [],
+      smileyList: { eyes: [], mouth: [] },
       error: { title: {} },
       home: { title: {}, skills: [] },
       work: { title: {}, tag: {}, projects: {} },
