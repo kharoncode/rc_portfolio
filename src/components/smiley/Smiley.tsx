@@ -16,7 +16,14 @@ const Smiley = () => {
          clearInterval(smileyTimeOut);
       };
    }, [smileyList]);
-   return <span className={styles.smiley}>{smiley}</span>;
+   return (
+      <p
+         className={`${styles.smiley} ${styles.glitch} ${styles.layers}`}
+         data-text={smiley}
+      >
+         <span>{smiley}</span>
+      </p>
+   );
 };
 
 export default Smiley;
