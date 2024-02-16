@@ -29,12 +29,12 @@ const Smiley = () => {
       };
    }, [smileyList]);
    return (
-      <p
+      <span
          className={`${styles.smiley} ${styles.glitch} ${styles.layers}`}
          data-text={smiley}
       >
          <span>{smiley}</span>
-      </p>
+      </span>
    );
 };
 
