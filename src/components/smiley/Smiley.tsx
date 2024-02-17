@@ -4,30 +4,24 @@ import { useEffect, useState } from 'react';
 import { getSmileyList } from '@/router/selectors';
 
 const Smiley = () => {
-   const smileyList = useSelector(getSmileyList);
+   const { eyes, mouth } = useSelector(getSmileyList);
    const [smiley, setSmiley] = useState(
-      `${smileyList.eyes[Math.floor(Math.random() * smileyList.eyes.length)]}${
-         smileyList.mouth[Math.floor(Math.random() * smileyList.mouth.length)]
+      `${eyes[Math.floor(Math.random() * eyes.length)]}${
+         mouth[Math.floor(Math.random() * mouth.length)]
       }`
    );
    useEffect(() => {
       const smileyTimeOut = setInterval(() => {
          setSmiley(
-            `${
-               smileyList.eyes[
-                  Math.floor(Math.random() * smileyList.eyes.length)
-               ]
-            }${
-               smileyList.mouth[
-                  Math.floor(Math.random() * smileyList.mouth.length)
-               ]
+            `${eyes[Math.floor(Math.random() * eyes.length)]}${
+               mouth[Math.floor(Math.random() * mouth.length)]
             }`
          );
       }, 3000);
       return () => {
          clearInterval(smileyTimeOut);
       };
-   }, [smileyList]);
+   }, [eyes, mouth]);
    return (
       <span
          className={`${styles.smiley} ${styles.glitch} ${styles.layers}`}

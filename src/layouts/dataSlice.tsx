@@ -50,7 +50,7 @@ type data = {
    };
    contact: {
       content: contentLangue;
-      input: { [key: string]: contentLangue };
+      input: { name: title };
       modal: title;
       waiting_room: { title: contentLangue; content: contentQuote };
    };
@@ -73,7 +73,7 @@ const initialState: dataState = {
       about: { title: {}, content: {} },
       contact: {
          content: {},
-         input: {},
+         input: { name: {} },
          modal: {},
          waiting_room: { title: {}, content: {} },
       },

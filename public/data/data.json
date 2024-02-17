@@ -190,8 +190,8 @@
       },
       "input": {
          "name": {
-            "en": ["Name"],
-            "fr": ["Nom"]
+            "en": "Name",
+            "fr": "Nom"
          }
       },
       "modal": {

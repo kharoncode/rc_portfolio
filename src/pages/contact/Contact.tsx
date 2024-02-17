@@ -72,7 +72,7 @@ const Contact = () => {
                            className={`${styles.label} langue fade`}
                            htmlFor="contact_name"
                         >
-                           {input.name[langue][0]}
+                           {input.name[langue]}
                         </label>
                         <input
                            className={`${styles.inputText} ${styles.input}`}
