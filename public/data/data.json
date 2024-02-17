@@ -45,14 +45,7 @@
                "en": "The first design in my portfolio, created in 2024 after I finished my learning. ",
                "fr": "Le premier design de mon portfolio réalisé en 2024 après la fin de ma formation."
             },
-            "tag": [
-               "react",
-               "redux",
-               "redux_tlk",
-               "mobile",
-               "desktop",
-               "personnal"
-            ],
+            "tag": ["react", "redux", "mobile", "desktop", "personnal"],
             "github": "https://github.com/kharoncode/rc_portfolio",
             "link": "https://www.collinremi.com"
          },
@@ -75,18 +68,10 @@
             "name": "BuffTimer",
             "category": "personnal",
             "description": {
-               "en": "It's an application that makes it easy to see which Buff is active and on whom. It can also be used to find out about the health of players and their needs.",
-               "fr": "Il s'agit d'une application qui permet de voir facilement quel Buff est actif et sur qui. Elle permet également de connaître l'état de santé des joueurs et leurs besoins."
+               "en": "An application for a Role Playing Game allowing players to share their character's health status, active Buffs and indicate their needs.",
+               "fr": "Une application pour un Jeu de Rôle permettant aux joueurs de partager l'état de santé de leur personnage, les Buff actif et d'indiquer leurs besoins."
             },
-            "tag": [
-               "react",
-               "redux",
-               "redux_tlk",
-               "api",
-               "mobile",
-               "desktop",
-               "personnal"
-            ],
+            "tag": ["react", "redux", "api", "mobile", "desktop", "personnal"],
             "github": "https://github.com/kharoncode/BuffTimer",
             "link": "https://www.collinremi.com/website/bufftimer"
          },
@@ -99,7 +84,7 @@
                "en": "An authentication page for a banking application.",
                "fr": "Une page d'authentification d'une application bancaire."
             },
-            "tag": ["react", "redux", "redux_tlk", "api", "desktop", "school"],
+            "tag": ["react", "redux", "api", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P13",
             "link": ""
          },
