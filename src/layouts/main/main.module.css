@@ -32,6 +32,10 @@
    scrollbar-width: none;
 }
 
+.mainContenair::-webkit-scrollbar {
+   display: none;
+}
+
 @media screen and (max-width: 750px) {
    .loremContainer {
       padding: 0;
