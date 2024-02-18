@@ -8,22 +8,20 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
       });
 });
 
-export type contentLangue = {
-   [key: string]: string[];
-};
+export type langue_array = { [key: string]: string[] };
+
+export type langue_string = { [key: string]: string };
 
 export type contentQuote = {
    [key: string]: { author: string; quote: string }[];
 };
-
-export type title = { [key: string]: string };
 
 export type project = {
    id: string;
    date: string;
    name: string;
    category: string;
-   description: title;
+   description: langue_string;
    tag: string[];
    github: string;
    link: string;
@@ -33,26 +31,26 @@ type data = {
    init: boolean;
    smileyList: { eyes: string[]; mouth: string[] };
    error: {
-      title: contentLangue;
+      title: langue_array;
    };
    home: {
-      title: contentLangue;
+      title: langue_array;
       skills: { name: string; type: string }[];
    };
    work: {
-      title: title;
+      title: langue_string;
       tag: { [key: string]: string };
       projects: { [key: string]: project };
    };
    about: {
-      title: title;
-      content: contentLangue;
+      title: langue_string;
+      content: langue_array;
    };
    contact: {
-      content: contentLangue;
-      input: { name: title };
-      modal: title;
-      waiting_room: { title: contentLangue; content: contentQuote };
+      content: langue_array;
+      input: { name: langue_string };
+      modal: langue_string;
+      waiting_room: { title: langue_array; content: contentQuote };
    };
 };
 
@@ -70,15 +68,15 @@ const initialState: dataState = {
          eyes: [':', 'X', ';', '=', '8'],
          mouth: [')', ']', 'D', '3', 'p', 'b', 'þ'],
       },
-      error: { title: {} },
-      home: { title: {}, skills: [] },
+      error: { title: { en: [], fr: [] } },
+      home: { title: { en: [], fr: [] }, skills: [] },
       work: { title: {}, tag: {}, projects: {} },
-      about: { title: {}, content: {} },
+      about: { title: {}, content: { en: [], fr: [] } },
       contact: {
-         content: {},
+         content: { en: [], fr: [] },
          input: { name: {} },
          modal: {},
-         waiting_room: { title: {}, content: {} },
+         waiting_room: { title: { en: [], fr: [] }, content: {} },
       },
    },
    error: undefined,
