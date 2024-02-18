@@ -66,7 +66,10 @@ const initialState: dataState = {
    loading: false,
    data: {
       init: true,
-      smileyList: { eyes: [], mouth: [] },
+      smileyList: {
+         eyes: [':', 'X', ';', '=', '8'],
+         mouth: [')', ']', 'D', '3', 'p', 'b', 'þ'],
+      },
       error: { title: {} },
       home: { title: {}, skills: [] },
       work: { title: {}, tag: {}, projects: {} },
