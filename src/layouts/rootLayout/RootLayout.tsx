@@ -7,6 +7,8 @@ import { fetchData } from '../dataSlice';
 import Header from '../header/Header';
 import Footer from '../footer/Footer';
 import Main from '../main/Main';
+import Lorem from '@/components/lorem/Lorem';
+import Smiley from '@/components/smiley/Smiley';
 
 const RootLayout = () => {
    const dispatch = useDispatch<AppDispatch>();
@@ -21,7 +23,12 @@ const RootLayout = () => {
    return (
       <>
          {loading ? (
-            'loading'
+            <div className={styles.loadingContainer}>
+               <div className={styles.loremContainer}>
+                  <Lorem isMouseHover={true} coordinate={''} />
+               </div>
+               <Smiley />
+            </div>
          ) : (
             <div className={styles.container}>
                <Header />
