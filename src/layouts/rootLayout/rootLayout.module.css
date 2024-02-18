@@ -17,7 +17,7 @@
    align-items: center;
    justify-content: center;
    opacity: 0;
-   animation: opacity 1000ms ease-in-out both;
+   animation: opacity 500ms ease-in-out both;
 }
 
 .loremContainer {
@@ -30,7 +30,7 @@
    width: 100%;
    display: flex;
    opacity: 0;
-   animation: opacity 1000ms ease-in-out both;
+   animation: opacity 900ms ease-in-out both;
 }
 
 @media screen and (max-width: 750px) {
