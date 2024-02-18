@@ -45,7 +45,7 @@
                "en": "The first design in my portfolio, created in 2024 after I finished my learning. ",
                "fr": "Le premier design de mon portfolio réalisé en 2024 après la fin de ma formation."
             },
-            "tag": ["react", "redux", "mobile", "desktop", "personnal"],
+            "tag": ["ts", "react", "redux", "mobile", "desktop", "personnal"],
             "github": "https://github.com/kharoncode/rc_portfolio",
             "link": "https://www.collinremi.com"
          },
@@ -58,7 +58,7 @@
                "en": "HRnet is an application that manages employee files.",
                "fr": "HRnet est une application qui gère les dossiers des employés."
             },
-            "tag": ["react", "redux", "redux_tlk", "npm", "desktop", "school"],
+            "tag": ["ts", "react", "redux", "npm", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P14-HRNet",
             "link": ""
          },
@@ -71,7 +71,7 @@
                "en": "An application for a Role Playing Game allowing players to share their character's health status, active Buffs and indicate their needs.",
                "fr": "Une application pour un Jeu de Rôle permettant aux joueurs de partager l'état de santé de leur personnage, les Buff actif et d'indiquer leurs besoins."
             },
-            "tag": ["react", "redux", "api", "mobile", "desktop", "personnal"],
+            "tag": ["ts", "react", "redux", "mobile", "desktop", "personnal"],
             "github": "https://github.com/kharoncode/BuffTimer",
             "link": "https://www.collinremi.com/website/bufftimer"
          },
@@ -84,7 +84,7 @@
                "en": "An authentication page for a banking application.",
                "fr": "Une page d'authentification d'une application bancaire."
             },
-            "tag": ["react", "redux", "api", "desktop", "school"],
+            "tag": ["js", "react", "redux", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P13",
             "link": ""
          },
@@ -97,7 +97,7 @@
                "en": "An analytical dashboard for a sports application.",
                "fr": "Un tableau de bord analytique pour une application sportive."
             },
-            "tag": ["react", "desktop", "api", "school"],
+            "tag": ["js", "react", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P12",
             "link": ""
          },
@@ -110,7 +110,7 @@
                "en": "Website for renting flats between private individuals.",
                "fr": "Site de mise en location d’appartements entre particuliers."
             },
-            "tag": ["react", "desktop", "mobile", "school"],
+            "tag": ["js", "react", "desktop", "mobile", "school"],
             "github": "https://github.com/kharoncode/OC-P11",
             "link": ""
          },

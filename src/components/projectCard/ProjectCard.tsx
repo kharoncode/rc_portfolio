@@ -12,7 +12,7 @@ type props = {
 };
 
 const ProjectCard = ({ data }: props) => {
-   const { id, name, description, github, link } = data;
+   const { id, name, description, github, link, tag } = data;
    const langue = useSelector(getLangue);
    return (
       <div className={styles.container}>
@@ -51,6 +51,16 @@ const ProjectCard = ({ data }: props) => {
          <div className={`${styles.info} langue fade`}>
             <h3>{name}</h3>
             {description[langue]}
+         </div>
+         <div className={styles.tags}>
+            {tag.map((el) => (
+               <img
+                  className={styles.tag}
+                  key={el}
+                  src={`./pictures/tags/${el}.svg`}
+                  alt={el}
+               />
+            ))}
          </div>
       </div>
    );
