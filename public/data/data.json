@@ -145,7 +145,7 @@
    "about": {
       "title": {
          "en": "About Me",
-         "fr": "A propos de moi"
+         "fr": "A propos"
       },
       "content": {
          "en": [
@@ -157,7 +157,7 @@
          ],
          "fr": [
             "Bonjour et bienvenue dans mon antre, permettez-moi de me présenter...",
-            "Je m'appelle Rémi et je suis ce que l'on pourrait appeler un développeur passionné. Doté d'une imagination débordante, mon parcours a commencé aux Beaux-Arts de Genève, en Suisse, où j'ai découvert les multiples façons dont l'art permettait aux esprits créatifs comme le mien de donner forme aux idées folles qu'ils faisaient naître. Cela m'a également permis de développer un goût pour la poursuite constante de défi afin de transformer des projets abstraits en réalités tangibles.",
+            "Je m'appelle Rémi et je suis ce que l'on pourrait appeler un développeur passionné. Doté d'une imagination débordante, mon parcours a commencé aux Beaux-Arts de Genève, en Suisse, où j'ai découvert les multiples façons dont l'art permet aux esprits créatifs comme le mien de donner forme aux idées folles qu'ils font naître. Cela m'a également permis de développer un goût pour la recherche constante de défi afin de transformer des projets abstraits en réalités tangibles.",
             "Des années après avoir quitté les Beaux-Arts, ce goût a trouvé sa véritable expression lorsque je suis entré dans le monde envoûtant du codage... troquer les pinceaux et les crayons contre des lignes de code a permis à ma soif de défi de rencontrer mon envie de trouver et d'appliquer des solutions innovantes à toutes sortes de problèmes et de défis.",
             "J'espère que vous apprécierez les projets que j'ai créés jusqu'à présent et que vous pouvez consulter ici.",
             "N'hésitez pas à me dire ce que vous en pensez ou même à me soumettre des idées farfelues qui, selon vous, alimenteront ma créativité."
@@ -186,6 +186,18 @@
             "en": "Message",
             "fr": "Message"
          }
+      },
+      "autoReply": {
+         "en": [
+            "Dear",
+            "Thank you for contacting me. I'll be in touch soon!",
+            "Best regards"
+         ],
+         "fr": [
+            "Cher.e",
+            "Merci de m'avoir laissé un message. Je vous recontact rapidement !",
+            "Cordialement"
+         ]
       },
       "modal": {
          "en": "Your message has been sent. Thank you very much!",
