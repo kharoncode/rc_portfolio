@@ -28,7 +28,7 @@
    },
    "work": {
       "title": {
-         "en": "Work",
+         "en": "Projects",
          "fr": "Projets"
       },
       "tag": {
@@ -60,7 +60,7 @@
             },
             "tag": ["ts", "react", "redux", "npm", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P14-HRNet",
-            "link": ""
+            "link": "https://www.collinremi.com/website/school/hrnet/"
          },
          "buffTimer": {
             "id": "buffTimer",
@@ -99,7 +99,7 @@
             },
             "tag": ["js", "react", "desktop", "school"],
             "github": "https://github.com/kharoncode/OC-P12",
-            "link": ""
+            "link": "https://www.collinremi.com/website/school/sportsee/"
          },
          "kaza": {
             "id": "kaza",
@@ -112,7 +112,7 @@
             },
             "tag": ["js", "react", "desktop", "mobile", "school"],
             "github": "https://github.com/kharoncode/OC-P11",
-            "link": ""
+            "link": "https://www.collinremi.com/website/school/kaza/"
          },
          "les_petits_plats": {
             "id": "les_petits_plats",
@@ -144,8 +144,8 @@
    },
    "about": {
       "title": {
-         "en": "About",
-         "fr": "A propos"
+         "en": "About Me",
+         "fr": "A propos de moi"
       },
       "content": {
          "en": [
@@ -177,6 +177,14 @@
          "name": {
             "en": "Name",
             "fr": "Nom"
+         },
+         "mail": {
+            "en": "Email",
+            "fr": "Courriel"
+         },
+         "message": {
+            "en": "Message",
+            "fr": "Message"
          }
       },
       "modal": {

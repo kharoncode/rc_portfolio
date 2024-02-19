@@ -48,7 +48,11 @@ type data = {
    };
    contact: {
       content: langue_array;
-      input: { name: langue_string };
+      input: {
+         name: langue_string;
+         mail: langue_string;
+         message: langue_string;
+      };
       modal: langue_string;
       waiting_room: { title: langue_array; content: contentQuote };
    };
@@ -74,7 +78,7 @@ const initialState: dataState = {
       about: { title: {}, content: { en: [], fr: [] } },
       contact: {
          content: { en: [], fr: [] },
-         input: { name: {} },
+         input: { name: {}, mail: {}, message: {} },
          modal: {},
          waiting_room: { title: { en: [], fr: [] }, content: {} },
       },

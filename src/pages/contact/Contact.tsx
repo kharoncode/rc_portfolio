@@ -87,7 +87,7 @@ const Contact = () => {
                            className={`${styles.label} langue fade`}
                            htmlFor="contact_mail"
                         >
-                           Email
+                           {input.mail[langue]}
                         </label>
                         <input
                            className={`${styles.inputText} ${styles.input}`}
@@ -103,7 +103,7 @@ const Contact = () => {
                            className={`${styles.label} langue fade`}
                            htmlFor="contact_message"
                         >
-                           Message
+                           {input.message[langue]}
                         </label>
                         <textarea
                            className={`${styles.inputTextArea} ${styles.input}`}
