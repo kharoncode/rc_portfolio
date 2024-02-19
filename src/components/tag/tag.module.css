@@ -1,16 +1,18 @@
 .container {
+   cursor: pointer;
    display: flex;
    align-items: center;
    justify-content: center;
-   opacity: 0.6;
+   opacity: 0.8;
 }
 
 .container:hover {
-   opacity: 0.9;
+   opacity: 1;
 }
 
 .selected {
    opacity: 1;
+   filter: var(--filter-tertiary);
 }
 
 .icone {

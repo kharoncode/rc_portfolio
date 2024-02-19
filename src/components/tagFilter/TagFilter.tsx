@@ -7,18 +7,19 @@ import { useSelector } from 'react-redux';
 import Tag from '../tag/Tag';
 
 type props = {
+   list: string[];
    setList: React.Dispatch<React.SetStateAction<string[]>>;
 };
 
 const TagFilter = (props: props) => {
-   const { setList } = props;
-   const { projects, tag } = useSelector(getWork);
+   const { list, setList } = props;
+   const { projects, tags } = useSelector(getWork);
    const [tagList, setTagList] = useState(['']);
    const [reset, setReset] = useState(false);
    const [open, setOpen] = useState(false);
 
    const filter = () => {
-      const raw = Object.keys(projects);
+      const raw = list;
       let tempList = raw;
       if (tagList.length !== 0) {
          tagList.map((value) => {
@@ -47,7 +48,7 @@ const TagFilter = (props: props) => {
    useEffect(() => {
       filter();
       /* eslint-disable */
-   }, [tagList]);
+   }, [tagList, list]);
    /* eslint-enable */
 
    return (
@@ -63,7 +64,7 @@ const TagFilter = (props: props) => {
          {open ? (
             <>
                <div className={styles.tagsContainer}>
-                  {Object.keys(tag).map((el) => {
+                  {Object.keys(tags).map((el) => {
                      return (
                         <Tag
                            key={el}
@@ -80,7 +81,7 @@ const TagFilter = (props: props) => {
                   src={resetIcone}
                   alt="Close"
                   onClick={() => {
-                     setList(Object.keys(projects));
+                     setList(list);
                      setTagList(['']);
                      setReset(!reset);
                   }}

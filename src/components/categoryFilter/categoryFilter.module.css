@@ -1,0 +1,23 @@
+.container {
+   width: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 50px;
+}
+
+.category {
+   cursor: pointer;
+   opacity: 0.8;
+}
+
+.icone {
+   width: 30px;
+   height: 30px;
+   filter: var(--filter-primary);
+}
+
+.active {
+   opacity: 1;
+   filter: var(--filter-tertiary);
+}

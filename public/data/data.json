@@ -31,9 +31,18 @@
          "en": "Projects",
          "fr": "Projets"
       },
-      "tag": {
+      "tags": {
+         "js": "JavaScript",
+         "ts": "TypeScript",
+         "react": "React",
+         "redux": "Redux",
+         "mobile": "Mobile",
+         "desktop": "Desktop"
+      },
+      "categories": {
          "personnal": "Personnal",
-         "school": "School"
+         "school": "School",
+         "professional": "Professional"
       },
       "projects": {
          "portfolio_2024": {

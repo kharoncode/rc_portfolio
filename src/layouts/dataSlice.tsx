@@ -39,7 +39,8 @@ type data = {
    };
    work: {
       title: langue_string;
-      tag: { [key: string]: string };
+      categories: { [key: string]: string };
+      tags: { [key: string]: string };
       projects: { [key: string]: project };
    };
    about: {
@@ -74,7 +75,7 @@ const initialState: dataState = {
       },
       error: { title: { en: [], fr: [] } },
       home: { title: { en: [], fr: [] }, skills: [] },
-      work: { title: {}, tag: {}, projects: {} },
+      work: { title: {}, tags: {}, categories: {}, projects: {} },
       about: { title: {}, content: { en: [], fr: [] } },
       contact: {
          content: { en: [], fr: [] },

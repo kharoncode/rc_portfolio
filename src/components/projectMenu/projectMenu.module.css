@@ -26,12 +26,6 @@
    transform: rotate(270deg);
 }
 
-.school p {
-   position: absolute;
-   transform: rotate(270deg);
-   color: green;
-}
-
 .professional {
    background-color: rgb(255, 4, 46);
    clip-path: url(#sector);
