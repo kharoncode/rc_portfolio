@@ -1,8 +1,12 @@
 {
    "name": "rc_portfolio",
    "private": true,
-   "version": "0.0.0",
+   "version": "1.0.0",
    "type": "module",
+   "author": {
+      "name": "Collin Rémi"
+   },
+   "description": "Protfolio 2024",
    "scripts": {
       "dev": "vite",
       "build": "tsc && vite build",
