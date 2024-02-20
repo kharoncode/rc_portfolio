@@ -12,8 +12,8 @@
    },
    "home": {
       "title": {
-         "en": ["my name is", "and i'm a", "Front-End Developer"],
-         "fr": ["je m'appelle", "et je suis", "Développeur Front-End"]
+         "en": ["my name is", "and i'm a", "Front-End", "Developer"],
+         "fr": ["je m'appelle", "et je suis", "Développeur", "Front-End"]
       },
       "skills": [
          { "name": "js", "type": "color" },

@@ -22,6 +22,7 @@ const Home = () => {
             <p>{content[1]}</p>
             <p className={styles.status}>
                <span className={styles.name}>{content[2]}</span>
+               <span className={styles.name}>{content[3]}</span>
                <Smiley />
             </p>
          </h2>
