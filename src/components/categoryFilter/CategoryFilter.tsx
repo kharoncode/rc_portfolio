@@ -12,6 +12,7 @@ const CategoryFilter = (props: props) => {
    const { projects, categories } = useSelector(getWork);
    const langue = useSelector(getLangue);
    const [isActive, setIsActive] = useState('');
+   const [isHover, setIsHover] = useState({ isHover: false, isActive: '' });
 
    const filter = (category: string) => {
       const projectsList = Object.keys(projects);
@@ -42,8 +43,14 @@ const CategoryFilter = (props: props) => {
                            filter(el);
                         }
                      }}
+                     onMouseEnter={() => {
+                        setIsHover({ isHover: true, isActive: el });
+                     }}
+                     onMouseLeave={() => {
+                        setIsHover({ isHover: false, isActive: '' });
+                     }}
                   >
-                     {categories[el][langue]}
+                     {categories[el].name[langue]}
                      <rt>
                         <img
                            className={styles.icone}
@@ -57,13 +64,17 @@ const CategoryFilter = (props: props) => {
          </div>
          <div
             className={`${styles.messageContainer} ${
-               isActive !== '' ? styles.openMessage : ''
+               isActive !== '' || isHover.isHover ? styles.openMessage : ''
             }`}
          >
             <p className={`${styles.message} langue fade`}>
-               Ceci est un échantillon des projets réalisé lors de ma formation.
-               Ils ont pour but de mettre en application les connaissances
-               acquises afin de valider les acquis et ne sont pas fini.
+               {isHover.isActive === '' && isActive !== ''
+                  ? categories[isActive].description[langue]
+                  : isHover.isActive !== '' && isActive !== ''
+                  ? categories[isHover.isActive].description[langue]
+                  : isHover.isActive !== '' && isActive === ''
+                  ? categories[isHover.isActive].description[langue]
+                  : ''}
             </p>
          </div>
       </div>
@@ -71,3 +82,6 @@ const CategoryFilter = (props: props) => {
 };
 
 export default CategoryFilter;
+
+/* categories[isActive].description[langue]
+categories[isHover.isActive].description[langue] */

@@ -41,16 +41,34 @@
       },
       "categories": {
          "personnal": {
-            "en": "Personnal",
-            "fr": "Personnel"
+            "name": {
+               "en": "Personnal",
+               "fr": "Personnel"
+            },
+            "description": {
+               "en": "The culmination of my overactive imagination.",
+               "fr": "La concrétisation de mon imagination sans limite."
+            }
          },
          "school": {
-            "en": "School",
-            "fr": "Ecole"
+            "name": {
+               "en": "School",
+               "fr": "Ecole"
+            },
+            "description": {
+               "en": "These projects were carried out during my training and their purpose was to validate what I had learnt. They are not to be taken as finished work but more as the progress of a team of developers between two sprints.",
+               "fr": "Ce sont des projets réalisés durant ma formation qui ont eu pour but de valider les acquis. Ils ne sont pas à prendre comme des travaux finis mais plus comme l'avancé d'une équipe de developper entre deux sprint."
+            }
          },
          "professional": {
-            "en": "Professional",
-            "fr": "Professionel"
+            "name": {
+               "en": "Professional",
+               "fr": "Professionel"
+            },
+            "description": {
+               "en": "This section is still empty for the moment, but I'm open to suggestions on how to fill it.",
+               "fr": "Cette section est encore vide pour le moment mais, je suis ouvert à toutes propositions pour la remplir."
+            }
          }
       },
       "projects": {

@@ -39,7 +39,9 @@ type data = {
    };
    work: {
       title: langue_string;
-      categories: { [key: string]: langue_string };
+      categories: {
+         [key: string]: { name: langue_string; description: langue_string };
+      };
       tags: { [key: string]: string };
       projects: { [key: string]: project };
       empty: project;
