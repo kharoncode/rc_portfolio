@@ -15,7 +15,7 @@ const CategoryFilter = (props: props) => {
 
    const filter = (category: string) => {
       const projectsList = Object.keys(projects);
-      let newList: string[] = [];
+      const newList: string[] = [];
       projectsList.map((el) => {
          if (projects[el].category === category) {
             newList.push(el);
@@ -25,34 +25,47 @@ const CategoryFilter = (props: props) => {
    };
 
    return (
-      <div className={`${styles.container} langue fade`}>
-         {Object.keys(categories).map((el) => {
-            return (
-               <ruby
-                  key={el}
-                  className={`${styles.category} ${
-                     isActive === el ? styles.active : ''
-                  }`}
-                  onClick={() => {
-                     setIsActive(isActive === el ? '' : el);
-                     if (isActive === el) {
-                        setList(Object.keys(projects));
-                     } else {
-                        filter(el);
-                     }
-                  }}
-               >
-                  {categories[el][langue]}
-                  <rt>
-                     <img
-                        className={styles.icone}
-                        src={`./pictures/tags/${el}.svg`}
-                        alt={el}
-                     />
-                  </rt>
-               </ruby>
-            );
-         })}
+      <div className={`${styles.container}`}>
+         <div className={`${styles.categoryContainer} langue fade`}>
+            {Object.keys(categories).map((el) => {
+               return (
+                  <ruby
+                     key={el}
+                     className={`${styles.category} ${
+                        isActive === el ? styles.active : ''
+                     }`}
+                     onClick={() => {
+                        setIsActive(isActive === el ? '' : el);
+                        if (isActive === el) {
+                           setList(Object.keys(projects));
+                        } else {
+                           filter(el);
+                        }
+                     }}
+                  >
+                     {categories[el][langue]}
+                     <rt>
+                        <img
+                           className={styles.icone}
+                           src={`./pictures/tags/${el}.svg`}
+                           alt={el}
+                        />
+                     </rt>
+                  </ruby>
+               );
+            })}
+         </div>
+         <div
+            className={`${styles.messageContainer} ${
+               isActive !== '' ? styles.openMessage : ''
+            }`}
+         >
+            <p className={`${styles.message} langue fade`}>
+               Ceci est un échantillon des projets réalisé lors de ma formation.
+               Ils ont pour but de mettre en application les connaissances
+               acquises afin de valider les acquis et ne sont pas fini.
+            </p>
+         </div>
       </div>
    );
 };
