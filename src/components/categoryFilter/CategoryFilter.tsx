@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import styles from './categoryFilter.module.css';
-import { getWork } from '@/router/selectors';
+import { getLangue, getWork } from '@/router/selectors';
 import { useState } from 'react';
 
 type props = {
@@ -10,6 +10,7 @@ type props = {
 const CategoryFilter = (props: props) => {
    const { setList } = props;
    const { projects, categories } = useSelector(getWork);
+   const langue = useSelector(getLangue);
    const [isActive, setIsActive] = useState('');
 
    const filter = (category: string) => {
@@ -24,7 +25,7 @@ const CategoryFilter = (props: props) => {
    };
 
    return (
-      <div className={styles.container}>
+      <div className={`${styles.container} langue fade`}>
          {Object.keys(categories).map((el) => {
             return (
                <ruby
@@ -41,7 +42,7 @@ const CategoryFilter = (props: props) => {
                      }
                   }}
                >
-                  {categories[el]}
+                  {categories[el][langue]}
                   <rt>
                      <img
                         className={styles.icone}

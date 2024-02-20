@@ -25,3 +25,13 @@
 .active {
    filter: var(--filter-tertiary);
 }
+
+@media screen and (max-width: 750px) {
+   .container {
+      gap: 30px;
+   }
+
+   .category {
+      font-size: 0.8rem;
+   }
+}

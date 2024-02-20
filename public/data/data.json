@@ -40,9 +40,18 @@
          "desktop": "Desktop"
       },
       "categories": {
-         "personnal": "Personnal",
-         "school": "School",
-         "professional": "Professional"
+         "personnal": {
+            "en": "Personnal",
+            "fr": "Personnel"
+         },
+         "school": {
+            "en": "School",
+            "fr": "Ecole"
+         },
+         "professional": {
+            "en": "Professional",
+            "fr": "Professionel"
+         }
       },
       "projects": {
          "portfolio_2024": {
