@@ -7,7 +7,7 @@ import TagFilter from '@/components/tagFilter/TagFilter';
 import CategoryFilter from '@/components/categoryFilter/CategoryFilter';
 
 const Work = () => {
-   const { title, projects } = useSelector(getWork);
+   const { title, projects, empty } = useSelector(getWork);
    const langue = useSelector(getLangue);
    const [list, setList] = useState(Object.keys(projects));
    const [tagList, setTagList] = useState(list);
@@ -18,9 +18,13 @@ const Work = () => {
             <CategoryFilter setList={setList} />
             <TagFilter list={list} setList={setTagList} />
             <div className={styles.projectsContainer}>
-               {tagList.map((key) => {
-                  return <ProjectCard key={key} data={projects[key]} />;
-               })}
+               {tagList.length !== 0 ? (
+                  tagList.map((key) => {
+                     return <ProjectCard key={key} data={projects[key]} />;
+                  })
+               ) : (
+                  <ProjectCard data={empty} />
+               )}
             </div>
          </div>
       </div>

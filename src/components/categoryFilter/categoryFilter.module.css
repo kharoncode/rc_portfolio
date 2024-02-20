@@ -11,6 +11,11 @@
    opacity: 0.8;
 }
 
+.category:hover {
+   opacity: 1;
+   filter: var(--filter-tertiary);
+}
+
 .icone {
    width: 30px;
    height: 30px;
@@ -18,6 +23,5 @@
 }
 
 .active {
-   opacity: 1;
    filter: var(--filter-tertiary);
 }

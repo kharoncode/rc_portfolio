@@ -149,6 +149,19 @@
             "github": "https://github.com/kharoncode/Front-End-Fisheye",
             "link": "https://kharoncode.github.io/Front-End-Fisheye/"
          }
+      },
+      "empty": {
+         "id": "empty",
+         "date": "",
+         "name": "Mystery",
+         "category": "",
+         "description": {
+            "en": "Can't find what you're looking for? Contact me and we can fill the gap!",
+            "fr": "Vous ne trouvez pas ce que vous cherchez? Contactez moi et nous pourrons combler ce vide!"
+         },
+         "tag": [],
+         "github": "http://collinremi.com/#/contact",
+         "link": "http://collinremi.com/#/contact"
       }
    },
    "about": {

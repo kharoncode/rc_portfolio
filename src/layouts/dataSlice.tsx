@@ -42,6 +42,7 @@ type data = {
       categories: { [key: string]: string };
       tags: { [key: string]: string };
       projects: { [key: string]: project };
+      empty: project;
    };
    about: {
       title: langue_string;
@@ -75,7 +76,22 @@ const initialState: dataState = {
       },
       error: { title: { en: [], fr: [] } },
       home: { title: { en: [], fr: [] }, skills: [] },
-      work: { title: {}, tags: {}, categories: {}, projects: {} },
+      work: {
+         title: {},
+         tags: {},
+         categories: {},
+         projects: {},
+         empty: {
+            id: '',
+            date: '',
+            name: '',
+            category: '',
+            description: {},
+            tag: [],
+            github: '',
+            link: '',
+         },
+      },
       about: { title: {}, content: { en: [], fr: [] } },
       contact: {
          content: { en: [], fr: [] },
