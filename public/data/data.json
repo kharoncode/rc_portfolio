@@ -18,12 +18,12 @@
       "skills": [
          { "name": "js", "type": "color" },
          { "name": "ts", "type": "color" },
-         { "name": "tailwind", "type": "color" },
          { "name": "react", "type": "color" },
          { "name": "redux", "type": "color" },
+         { "name": "angular", "type": "color" },
+         { "name": "tailwind", "type": "color" },
          { "name": "npm", "type": "color" },
-         { "name": "vitejs", "type": "color" },
-         { "name": "nextjs", "type": "bw" }
+         { "name": "vitejs", "type": "color" }
       ]
    },
    "work": {
