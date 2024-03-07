@@ -24,13 +24,15 @@ const ProjectCard = ({ data }: props) => {
                alt={`${name} Picture`}
             />
             <div className={styles.hoverCard}>
-               <Link to={github} target="_blank">
-                  <img
-                     className={`${styles.icone} ${styles.iconeLink}`}
-                     src={gitHubIcone}
-                     alt="GitHub Link"
-                  />
-               </Link>
+               {github !== '' && (
+                  <Link to={github} target="_blank">
+                     <img
+                        className={`${styles.icone} ${styles.iconeLink}`}
+                        src={gitHubIcone}
+                        alt="GitHub Link"
+                     />
+                  </Link>
+               )}
                {link === '' ? (
                   <img
                      className={`${styles.icone} ${styles.eyeSlash}`}
@@ -38,11 +40,11 @@ const ProjectCard = ({ data }: props) => {
                      alt="No Web Link"
                   />
                ) : (
-                  <Link to={link} target="_blank">
+                  <Link to={link} target={id !== 'empty' ? '_blank' : ''}>
                      <img
                         className={`${styles.icone} ${styles.iconeLink}`}
                         src={eyeIcone}
-                        alt="Web Link"
+                        alt={`${name} Link`}
                      />
                   </Link>
                )}
