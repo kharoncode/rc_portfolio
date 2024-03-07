@@ -45,12 +45,9 @@ const CategoryFilter = (props: props) => {
                      }}
                      onMouseEnter={() => {
                         setIsHover({ isHover: true, isActive: el });
-                        filter(el);
                      }}
                      onMouseLeave={() => {
                         setIsHover({ isHover: false, isActive: '' });
-                        isActive !== el && filter(isActive);
-                        isActive === '' && setList(Object.keys(projects));
                      }}
                   >
                      {categories[el].name[langue]}
@@ -67,15 +64,11 @@ const CategoryFilter = (props: props) => {
          </div>
          <div
             className={`${styles.messageContainer} ${
-               isActive !== '' || isHover.isHover ? styles.openMessage : ''
+               isHover.isHover ? styles.openMessage : ''
             }`}
          >
             <p className={`${styles.message} langue fade`}>
-               {isHover.isActive === '' && isActive !== ''
-                  ? categories[isActive].description[langue]
-                  : isHover.isActive !== '' && isActive !== ''
-                  ? categories[isHover.isActive].description[langue]
-                  : isHover.isActive !== '' && isActive === ''
+               {isHover.isHover === true
                   ? categories[isHover.isActive].description[langue]
                   : ''}
             </p>
@@ -85,6 +78,3 @@ const CategoryFilter = (props: props) => {
 };
 
 export default CategoryFilter;
-
-/* categories[isActive].description[langue]
-categories[isHover.isActive].description[langue] */

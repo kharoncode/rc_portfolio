@@ -1,4 +1,5 @@
 .container {
+   position: relative;
    width: 100%;
    display: flex;
    flex-direction: column;
@@ -11,7 +12,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   gap: 50px;
+   gap: 60px;
 }
 
 .category {
@@ -35,12 +36,16 @@
 }
 
 .messageContainer {
+   position: absolute;
+   border-radius: 10px;
+   top: 0;
    top: 40px;
    max-width: 80%;
    height: 0;
    overflow: hidden;
    transition-duration: 200ms;
    background: rgba(var(--bg-primary));
+   z-index: 1000;
 }
 
 .message {
@@ -55,6 +60,12 @@
    transition-duration: 400ms;
 }
 
+@media screen and (max-width: 992px) {
+   .messageContainer {
+      display: none;
+   }
+}
+
 @media screen and (max-width: 750px) {
    .categoryContainer {
       gap: 30px;
@@ -62,8 +73,5 @@
 
    .category {
       font-size: 0.8rem;
-   }
-   .messageContainer {
-      max-width: 100%;
    }
 }
