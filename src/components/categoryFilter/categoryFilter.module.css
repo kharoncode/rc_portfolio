@@ -1,11 +1,9 @@
 .container {
-   position: relative;
    width: 100%;
    display: flex;
    flex-direction: column;
    align-items: center;
    gap: 30px;
-   margin-bottom: 20px;
 }
 
 .categoryContainer {
@@ -38,8 +36,7 @@
 
 .messageContainer {
    top: 40px;
-   position: absolute;
-   width: 50%;
+   max-width: 80%;
    height: 0;
    overflow: hidden;
    transition-duration: 200ms;
@@ -53,7 +50,7 @@
 }
 
 .openMessage {
-   height: 80px;
+   height: initial;
    box-shadow: rgba(var(--text-tertiary), 0.2) 0px 7px 29px 0px;
    transition-duration: 400ms;
 }
@@ -65,5 +62,8 @@
 
    .category {
       font-size: 0.8rem;
+   }
+   .messageContainer {
+      max-width: 100%;
    }
 }

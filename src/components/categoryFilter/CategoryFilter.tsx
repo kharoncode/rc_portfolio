@@ -45,9 +45,12 @@ const CategoryFilter = (props: props) => {
                      }}
                      onMouseEnter={() => {
                         setIsHover({ isHover: true, isActive: el });
+                        filter(el);
                      }}
                      onMouseLeave={() => {
                         setIsHover({ isHover: false, isActive: '' });
+                        isActive !== el && filter(isActive);
+                        isActive === '' && setList(Object.keys(projects));
                      }}
                   >
                      {categories[el].name[langue]}
