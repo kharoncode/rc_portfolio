@@ -140,6 +140,10 @@ a:active {
    flex-direction: column;
 }
 
+.grecaptcha-badge {
+   display: none !important;
+}
+
 @media screen and (max-width: 950px) {
    .page-title {
       font-size: 9svw;

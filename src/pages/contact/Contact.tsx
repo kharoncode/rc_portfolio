@@ -43,19 +43,31 @@ const Contact = () => {
          to_name: 'Rémi',
       };
       data['template_params'] = result;
-      fetch('https://api.emailjs.com/api/v1.0/email/send', {
-         method: 'POST',
-         body: JSON.stringify(data),
-         headers: {
-            'Content-Type': 'application/json',
-         },
+      // @ts-expect-error: Unreachable code error
+      grecaptcha.ready(function () {
+         // @ts-expect-error: Unreachable code error
+         grecaptcha
+            .execute('6LcTHpApAAAAANVRlT6Jwz4awthQ0N-zYX3vHBcu', {
+               action: 'submit',
+            })
+            .then(function () {
+               fetch('https://api.emailjs.com/api/v1.0/email/send', {
+                  method: 'POST',
+                  body: JSON.stringify(data),
+                  headers: {
+                     'Content-Type': 'application/json',
+                  },
+               });
+               store.dispatch(
+                  settingsSlice.actions.setTimer(Date.now() + 60000)
+               );
+               setIsOver(false);
+               setOpen(true);
+               resetValue(name_elt);
+               resetValue(mail_elt);
+               resetValue(message_elt);
+            });
       });
-      store.dispatch(settingsSlice.actions.setTimer(Date.now() + 60000));
-      setIsOver(false);
-      setOpen(true);
-      resetValue(name_elt);
-      resetValue(mail_elt);
-      resetValue(message_elt);
    };
    return (
       <div className={`container`}>
@@ -112,6 +124,7 @@ const Contact = () => {
                            required
                         />
                      </div>
+
                      <button
                         className={`${styles.button} ${styles.submitButton}`}
                         type="submit"
