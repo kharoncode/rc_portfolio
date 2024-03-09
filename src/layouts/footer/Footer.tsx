@@ -3,12 +3,22 @@ import githubIcone from '@/assets/icones/github.svg';
 import linkedinIcone from '@/assets/icones/linkedin.svg';
 import mail from '@/assets/icones/mail.svg';
 import Settings from '@/components/settings/settings';
+import cvIcone from '@/assets/icones/badge.svg';
 
 const Footer = () => {
    return (
       <footer className={styles.container}>
          <Settings />
          <div className={styles.iconesContainer}>
+            <a
+               className={styles.a}
+               href="./data/collinremi_cv.pdf"
+               target="_blank"
+            >
+               <div className={styles.navIconeContainer}>
+                  <img className={styles.icone} src={cvIcone} alt="CV" />
+               </div>
+            </a>
             <a
                className={styles.a}
                href="https://github.com/kharoncode"
