@@ -3,7 +3,7 @@ import githubIcone from '@/assets/icones/github.svg';
 import linkedinIcone from '@/assets/icones/linkedin.svg';
 import mail from '@/assets/icones/mail.svg';
 import Settings from '@/components/settings/settings';
-import cvIcone from '@/assets/icones/badge.svg';
+import resume from '@/assets/icones/resume.svg';
 
 const Footer = () => {
    return (
@@ -16,7 +16,7 @@ const Footer = () => {
                target="_blank"
             >
                <div className={styles.navIconeContainer}>
-                  <img className={styles.icone} src={cvIcone} alt="CV" />
+                  <img className={styles.icone} src={resume} alt="CV" />
                </div>
             </a>
             <a
