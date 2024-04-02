@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import styles from './waitingroom.module.css';
 import { getContact, getLangue, getTimer } from '@/router/selectors';
 import backIcone from '@/assets/icones/reset.svg';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { store } from '@/router/store';
 import { settingsSlice } from '@/layouts/settingsSlice';
 

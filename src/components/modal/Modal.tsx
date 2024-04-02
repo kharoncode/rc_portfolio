@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import closeIcone from '@/assets/icones/close.svg';
 import styles from './modal.module.css';
 
