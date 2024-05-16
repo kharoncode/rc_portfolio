@@ -73,6 +73,19 @@
          }
       },
       "projects": {
+         "buildrh": {
+            "id": "buildrh",
+            "date": "01/02/2024",
+            "name": "Build-RH",
+            "category": "professional",
+            "description": {
+               "en": "Build RH is a recruitment space specialising in IT and computing.",
+               "fr": "Build RH est un espace de recrutement spécialisé dans l'IT et l'informatique."
+            },
+            "tag": ["ts", "angular", "desktop", "mobile", "professional"],
+            "github": "https://github.com/BumbleWeb/buildrh",
+            "link": "https://build-rh.com"
+         },
          "portfolio_2024": {
             "id": "portfolio_2024",
             "date": "12/02/2024",
@@ -176,19 +189,6 @@
             "tag": ["js", "desktop", "mobile", "school"],
             "github": "https://github.com/kharoncode/Front-End-Fisheye",
             "link": "https://kharoncode.github.io/Front-End-Fisheye/"
-         },
-         "buildrh": {
-            "id": "buildrh",
-            "date": "01/02/2024",
-            "name": "Build-RH",
-            "category": "professional",
-            "description": {
-               "en": "Build RH is a recruitment space specialising in IT and computing.",
-               "fr": "Build RH est un espace de recrutement spécialisé dans l'IT et l'informatique."
-            },
-            "tag": ["ts", "angular", "desktop", "mobile", "professional"],
-            "github": "https://github.com/BumbleWeb/buildrh",
-            "link": "https://build-rh.com"
          }
       },
       "empty": {
