@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from '@/pages/home/Home';
 import Error from '@/pages/error/error';
 import RootLayout from '@/layouts/rootLayout/RootLayout';
@@ -11,7 +11,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 //import Projects from '@/pages/projects/Projects';
 
 const App = () => {
-   const router = createHashRouter([
+   const router = createBrowserRouter([
       {
          path: '/',
          element: <RootLayout />,
